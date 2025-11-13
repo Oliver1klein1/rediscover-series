@@ -1,0 +1,15 @@
+[submodule "books/liberating-humanity"]
+	path = books/liberating-humanity
+	url = https://github.com/Oliver1klein1/liberating-humanity.git
+[submodule "books/reality-unveiled"]
+	path = books/reality-unveiled
+	url = https://github.com/Oliver1klein1/reality-unveiled.git
+[submodule "books/escape-the-hell-myth"]
+	path = books/escape-the-hell-myth
+	url = https://github.com/Oliver1klein1/escape_the_hell_myth.git
+[submodule "books/jesus-god"]
+	path = books/jesus-god
+	url = https://github.com/Oliver1klein1/jesus-god.git
+[submodule "books/bible-contradictions"]
+	path = books/bible-contradictions
+	url = https://github.com/Oliver1klein1/bible-contradictions.git
