@@ -65,16 +65,6 @@ export default function AboutPage() {
             <p className="text-lg text-gray-300 leading-relaxed mb-6 text-justify">
               I've earned no theology degrees (despite years of study which far exceed the hours required for these). Just scars from decades in medicine, pharma, and church life, dissecting human bodies and human beliefs. I wore the "born-again, Spirit-filled, Bible-believing" badge proudly... until Jesus' unfiltered words turned my blood to ice.
             </p>
-            <div className="border-t border-gray-800 pt-6 mt-6">
-              <h2 className="text-2xl font-bold text-white mb-4">The Rediscover Series</h2>
-              <p className="text-gray-300 leading-relaxed text-justify">
-                Through five groundbreaking books, Ansilo Boff challenges two thousand years of religious distortion, 
-                exposing how Jesus' message of liberation was turned into obedience, and love into fear. The series 
-                reveals how Yahweh's wrath was mistaken for the Father's love, and how Paul's complex "blood" formula replaced Jesus' 
-                powerful and simple message. Each book builds on the last, uncovering the truth that Jesus never preached fear, wrath, or 
-                blood sacrifice... but revealed a Father who restores, not destroys.
-              </p>
-            </div>
           </div>
         </div>
       </div>

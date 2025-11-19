@@ -347,3 +347,5 @@ Create a visual comparison table showing:
 
 *Last Updated: Based on 2024-2025 Amazon KDP structure and children's book market research*
 
+
+

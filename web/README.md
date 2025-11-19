@@ -67,3 +67,5 @@ npm start
 - Add new pages in the `app/` directory
 - Update navigation in `components/Navigation.tsx`
 
+
+

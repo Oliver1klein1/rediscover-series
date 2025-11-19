@@ -88,7 +88,7 @@ export default function Home() {
               But what if that story wasn't from Jesus at all?
             </p>
             <p>
-              This series rips through the edits, lies, and power plays that buried his true teachings. It exposes how Yahweh's wrath was mistaken for the Father's love … and how Paul's control replaced Jesus' freedom. From Liberating Humanity to Escape the Hell Myth, these books uncover a single revelation: Jesus never preached fear, wrath, or blood sacrifice. The scriptures were tampered with. Jesus revealed a Father who restores, not destroys.
+              This series rips through the edits, lies, and power plays that buried his true teachings. It exposes how Yahweh's wrath was mistaken for the Father's love … and how Paul's control replaced Jesus' freedom. From <em className="font-bold italic">"Liberating Humanity"</em> to <em className="font-bold italic">"Escape the Hell Myth"</em>, these books uncover a single revelation: Jesus never preached fear, wrath, or blood sacrifice. The scriptures were tampered with. Jesus revealed a Father who restores, not destroys.
             </p>
             <div className="text-center py-6">
               <p className="text-2xl font-bold text-yellow-400 mb-2">

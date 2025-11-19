@@ -224,14 +224,14 @@ export default function OffersPage() {
                           <Link
                             key={book.id}
                             href={`/books/${book.slug}`}
-                            className="group relative w-16 h-20 rounded overflow-hidden border border-gray-700 hover:border-yellow-400 transition"
+                            className="group relative w-20 h-32 rounded overflow-hidden border border-gray-700 hover:border-yellow-400 transition"
                           >
                             <Image
                               src={`/${book.coverImage}`}
                               alt={book.title}
                               fill
                               className="object-cover"
-                              sizes="64px"
+                              sizes="80px"
                             />
                           </Link>
                         );
@@ -262,14 +262,14 @@ export default function OffersPage() {
                       <Link
                         key={book.id}
                         href={`/books/${book.slug}`}
-                        className="relative w-12 h-16 rounded overflow-hidden border border-gray-700 hover:border-yellow-400 transition"
+                        className="relative w-16 h-24 rounded overflow-hidden border border-gray-700 hover:border-yellow-400 transition"
                       >
                         <Image
                           src={`/${book.coverImage}`}
                           alt={book.title}
                           fill
                           className="object-cover"
-                          sizes="48px"
+                          sizes="64px"
                         />
                       </Link>
                     );

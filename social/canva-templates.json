@@ -1,0 +1,782 @@
+{
+  "templates": [
+    {
+      "id": "insta-square-quote-001",
+      "template_name": "Instagram Square Quote Post",
+      "platform": "Instagram",
+      "format": "1080x1080",
+      "layout_description": {
+        "margins": {
+          "top": "80px",
+          "bottom": "120px",
+          "left": "80px",
+          "right": "80px"
+        },
+        "spacing": {
+          "between_elements": "40px",
+          "line_height": "1.4"
+        },
+        "alignment": {
+          "quote_text": "center",
+          "footer": "center",
+          "hashtags": "center"
+        },
+        "content_zones": {
+          "top_spacer": "80px",
+          "quote_area": "flexible (centered)",
+          "spacer": "40px",
+          "footer_area": "fixed bottom 120px"
+        }
+      },
+      "fonts": {
+        "primary_quote": {
+          "name": "Playfair Display",
+          "weight": "Bold",
+          "size": "48px",
+          "style": "Regular"
+        },
+        "secondary_text": {
+          "name": "Montserrat",
+          "weight": "Regular",
+          "size": "16px",
+          "style": "Regular"
+        },
+        "footer": {
+          "name": "Montserrat",
+          "weight": "Light",
+          "size": "14px",
+          "style": "Regular"
+        },
+        "hashtags": {
+          "name": "Montserrat",
+          "weight": "Regular",
+          "size": "14px",
+          "style": "Regular"
+        }
+      },
+      "colors": {
+        "primary_text": "#1A1A1A",
+        "secondary_text": "#4A4A4A",
+        "accent": "#D4AF37",
+        "background": "#FFFFFF",
+        "footer": "#6B6B6B",
+        "hashtags": "#8B8B8B"
+      },
+      "background_style": {
+        "type": "minimal",
+        "description": "Clean white background (#FFFFFF) with optional subtle texture overlay at 5% opacity",
+        "gradient": null,
+        "texture": {
+          "enabled": false,
+          "opacity": 5
+        },
+        "border": {
+          "enabled": false
+        }
+      },
+      "text_styles": {
+        "quote_text": {
+          "size": "48px",
+          "weight": "Bold",
+          "color": "#1A1A1A",
+          "line_height": "1.4",
+          "letter_spacing": "-0.5px",
+          "drop_shadow": {
+            "enabled": false
+          },
+          "text_align": "center",
+          "max_width": "900px",
+          "padding": "0px"
+        },
+        "source_attribution": {
+          "size": "14px",
+          "weight": "Regular",
+          "color": "#6B6B6B",
+          "line_height": "1.6",
+          "letter_spacing": "0px",
+          "text_align": "center",
+          "margin_top": "20px"
+        },
+        "footer": {
+          "size": "14px",
+          "weight": "Light",
+          "color": "#6B6B6B",
+          "line_height": "1.5",
+          "letter_spacing": "1px",
+          "text_align": "center",
+          "text_transform": "lowercase"
+        }
+      },
+      "footer_placement": {
+        "position": "absolute",
+        "bottom": "40px",
+        "left": "50%",
+        "transform": "translateX(-50%)",
+        "width": "auto",
+        "alignment": "center",
+        "font_size": "14px",
+        "color": "#6B6B6B",
+        "letter_spacing": "1px",
+        "required": true,
+        "always_visible": true
+      },
+      "image_placeholder": {
+        "enabled": false,
+        "description": "No image placeholder - text-only design"
+      },
+      "brand_consistency_rules": {
+        "minimal_margin": "80px",
+        "footer_margin_bottom": "40px",
+        "consistent_font_hierarchy": "Playfair Display for quotes, Montserrat for all other text",
+        "color_palette": "Strict adherence to specified hex colors",
+        "spacing_ratio": "40px between major elements",
+        "max_text_width": "900px for readability",
+        "footer_always_present": true,
+        "footer_style_consistent": "Montserrat Light, 14px, lowercase, letter-spacing 1px"
+      }
+    },
+    {
+      "id": "insta-carousel-001",
+      "template_name": "Instagram Carousel Multi-Slide",
+      "platform": "Instagram",
+      "format": "1080x1080",
+      "layout_description": {
+        "margins": {
+          "top": "60px",
+          "bottom": "100px",
+          "left": "60px",
+          "right": "60px"
+        },
+        "spacing": {
+          "between_elements": "30px",
+          "slide_transition": "smooth"
+        },
+        "alignment": {
+          "content": "center",
+          "footer": "center"
+        },
+        "slide_structure": {
+          "slide_1": "Hook/Question (large text)",
+          "slide_2_to_n_minus_1": "Supporting points (medium text)",
+          "final_slide": "CTA + Footer (prominent)"
+        }
+      },
+      "fonts": {
+        "slide_title": {
+          "name": "Bebas Neue",
+          "weight": "Regular",
+          "size": "72px",
+          "style": "Regular"
+        },
+        "slide_content": {
+          "name": "Montserrat",
+          "weight": "Regular",
+          "size": "32px",
+          "style": "Regular"
+        },
+        "cta": {
+          "name": "Montserrat",
+          "weight": "Bold",
+          "size": "24px",
+          "style": "Regular"
+        },
+        "footer": {
+          "name": "Montserrat",
+          "weight": "Light",
+          "size": "14px",
+          "style": "Regular"
+        }
+      },
+      "colors": {
+        "slide_background": "#FFFFFF",
+        "text_primary": "#1A1A1A",
+        "accent": "#D4AF37",
+        "cta_background": "#1A1A1A",
+        "cta_text": "#FFFFFF",
+        "footer": "#6B6B6B"
+      },
+      "background_style": {
+        "type": "minimal",
+        "description": "Clean white background per slide, optional subtle gradient overlay on final slide",
+        "gradient": {
+          "enabled": false,
+          "final_slide_only": true,
+          "colors": ["#FFFFFF", "#F8F8F8"],
+          "direction": "diagonal"
+        }
+      },
+      "text_styles": {
+        "slide_title": {
+          "size": "72px",
+          "weight": "Regular",
+          "color": "#1A1A1A",
+          "line_height": "1.2",
+          "letter_spacing": "2px",
+          "text_align": "center"
+        },
+        "slide_content": {
+          "size": "32px",
+          "weight": "Regular",
+          "color": "#1A1A1A",
+          "line_height": "1.5",
+          "letter_spacing": "0px",
+          "text_align": "center",
+          "max_width": "900px"
+        },
+        "cta": {
+          "size": "24px",
+          "weight": "Bold",
+          "color": "#FFFFFF",
+          "background": "#1A1A1A",
+          "padding": "20px 40px",
+          "border_radius": "4px",
+          "text_align": "center"
+        }
+      },
+      "footer_placement": {
+        "position": "absolute",
+        "bottom": "30px",
+        "left": "50%",
+        "transform": "translateX(-50%)",
+        "width": "auto",
+        "alignment": "center",
+        "font_size": "14px",
+        "color": "#6B6B6B",
+        "letter_spacing": "1px",
+        "required": true,
+        "on_all_slides": true,
+        "final_slide_prominence": "More prominent, larger size (16px)"
+      },
+      "image_placeholder": {
+        "enabled": false,
+        "description": "Text-only carousel design"
+      },
+      "brand_consistency_rules": {
+        "slide_count": "3-7 slides recommended",
+        "consistent_footer": "Footer on every slide",
+        "final_slide_cta": "CTA button on final slide only",
+        "spacing_consistency": "60px margins maintained across all slides",
+        "font_hierarchy": "Bebas Neue for titles, Montserrat for content",
+        "color_consistency": "Strict color palette adherence"
+      }
+    },
+    {
+      "id": "facebook-text-post-001",
+      "template_name": "Facebook Text Post with Quote",
+      "platform": "Facebook",
+      "format": "1200x630",
+      "layout_description": {
+        "margins": {
+          "top": "60px",
+          "bottom": "100px",
+          "left": "80px",
+          "right": "80px"
+        },
+        "spacing": {
+          "between_elements": "30px",
+          "line_height": "1.6"
+        },
+        "alignment": {
+          "quote": "left",
+          "footer": "center"
+        },
+        "content_structure": {
+          "header_area": "Optional decorative element (top 60px)",
+          "quote_area": "Main content (flexible)",
+          "cta_area": "Call-to-action (30px below quote)",
+          "footer_area": "Fixed bottom 80px"
+        }
+      },
+      "fonts": {
+        "quote": {
+          "name": "Playfair Display",
+          "weight": "Regular",
+          "size": "36px",
+          "style": "Italic"
+        },
+        "body_text": {
+          "name": "Montserrat",
+          "weight": "Regular",
+          "size": "18px",
+          "style": "Regular"
+        },
+        "cta": {
+          "name": "Montserrat",
+          "weight": "SemiBold",
+          "size": "16px",
+          "style": "Regular"
+        },
+        "footer": {
+          "name": "Montserrat",
+          "weight": "Light",
+          "size": "12px",
+          "style": "Regular"
+        }
+      },
+      "colors": {
+        "background": "#FFFFFF",
+        "quote_text": "#1A1A1A",
+        "body_text": "#4A4A4A",
+        "accent": "#D4AF37",
+        "cta_text": "#1A1A1A",
+        "footer": "#6B6B6B"
+      },
+      "background_style": {
+        "type": "minimal",
+        "description": "Clean white background with optional subtle left border accent (4px, #D4AF37)",
+        "border": {
+          "enabled": true,
+          "side": "left",
+          "width": "4px",
+          "color": "#D4AF37",
+          "height": "80%",
+          "position": "left edge, centered vertically"
+        }
+      },
+      "text_styles": {
+        "quote": {
+          "size": "36px",
+          "weight": "Regular",
+          "style": "Italic",
+          "color": "#1A1A1A",
+          "line_height": "1.6",
+          "letter_spacing": "0px",
+          "text_align": "left",
+          "max_width": "1000px"
+        },
+        "body_text": {
+          "size": "18px",
+          "weight": "Regular",
+          "color": "#4A4A4A",
+          "line_height": "1.6",
+          "text_align": "left"
+        },
+        "cta": {
+          "size": "16px",
+          "weight": "SemiBold",
+          "color": "#1A1A1A",
+          "text_align": "left",
+          "margin_top": "30px"
+        }
+      },
+      "footer_placement": {
+        "position": "absolute",
+        "bottom": "40px",
+        "left": "50%",
+        "transform": "translateX(-50%)",
+        "width": "auto",
+        "alignment": "center",
+        "font_size": "12px",
+        "color": "#6B6B6B",
+        "letter_spacing": "1px",
+        "required": true,
+        "always_visible": true
+      },
+      "image_placeholder": {
+        "enabled": false,
+        "description": "Text-only design, optional decorative element in header"
+      },
+      "brand_consistency_rules": {
+        "left_border_accent": "Optional 4px gold accent on left edge",
+        "readable_width": "Max 1000px for quote text",
+        "footer_consistency": "Always bottom-center, 12px Montserrat Light",
+        "spacing": "30px between quote and CTA",
+        "font_hierarchy": "Playfair Display for quotes, Montserrat for body"
+      }
+    },
+    {
+      "id": "tiktok-slideshow-001",
+      "template_name": "TikTok Text Slideshow",
+      "platform": "TikTok",
+      "format": "1080x1920",
+      "layout_description": {
+        "margins": {
+          "top": "120px",
+          "bottom": "140px",
+          "left": "60px",
+          "right": "60px"
+        },
+        "spacing": {
+          "between_frames": "smooth transition",
+          "text_spacing": "40px"
+        },
+        "alignment": {
+          "text": "center",
+          "footer": "center"
+        },
+        "frame_structure": {
+          "frame_1": "Hook/Question (largest text)",
+          "frames_2_to_n_minus_1": "Supporting text (medium)",
+          "final_frame": "CTA + Footer (prominent)"
+        }
+      },
+      "fonts": {
+        "hook_text": {
+          "name": "Bebas Neue",
+          "weight": "Regular",
+          "size": "64px",
+          "style": "Regular"
+        },
+        "body_text": {
+          "name": "Montserrat",
+          "weight": "Bold",
+          "size": "42px",
+          "style": "Regular"
+        },
+        "cta": {
+          "name": "Montserrat",
+          "weight": "Bold",
+          "size": "36px",
+          "style": "Regular"
+        },
+        "footer": {
+          "name": "Montserrat",
+          "weight": "Light",
+          "size": "16px",
+          "style": "Regular"
+        }
+      },
+      "colors": {
+        "background": "#000000",
+        "text_primary": "#FFFFFF",
+        "accent": "#D4AF37",
+        "cta_background": "#D4AF37",
+        "cta_text": "#000000",
+        "footer": "#999999"
+      },
+      "background_style": {
+        "type": "dark_minimal",
+        "description": "Solid black background (#000000) with optional subtle gradient overlay",
+        "gradient": {
+          "enabled": false,
+          "colors": ["#000000", "#1A1A1A"],
+          "direction": "radial",
+          "opacity": 30
+        }
+      },
+      "text_styles": {
+        "hook_text": {
+          "size": "64px",
+          "weight": "Regular",
+          "color": "#FFFFFF",
+          "line_height": "1.3",
+          "letter_spacing": "2px",
+          "text_align": "center",
+          "text_transform": "uppercase"
+        },
+        "body_text": {
+          "size": "42px",
+          "weight": "Bold",
+          "color": "#FFFFFF",
+          "line_height": "1.4",
+          "letter_spacing": "0px",
+          "text_align": "center",
+          "max_width": "900px"
+        },
+        "cta": {
+          "size": "36px",
+          "weight": "Bold",
+          "color": "#000000",
+          "background": "#D4AF37",
+          "padding": "24px 48px",
+          "border_radius": "8px",
+          "text_align": "center"
+        }
+      },
+      "footer_placement": {
+        "position": "absolute",
+        "bottom": "50px",
+        "left": "50%",
+        "transform": "translateX(-50%)",
+        "width": "auto",
+        "alignment": "center",
+        "font_size": "16px",
+        "color": "#999999",
+        "letter_spacing": "1px",
+        "required": true,
+        "on_all_frames": true,
+        "final_frame_prominence": "More prominent (18px, #D4AF37)"
+      },
+      "image_placeholder": {
+        "enabled": false,
+        "description": "Text-only slideshow design"
+      },
+      "brand_consistency_rules": {
+        "dark_theme": "Black background for TikTok vertical format",
+        "high_contrast": "White text on black for readability",
+        "frame_count": "3-7 frames recommended",
+        "footer_on_all": "Footer on every frame",
+        "final_frame_cta": "CTA button on final frame",
+        "spacing": "40px between text elements",
+        "font_hierarchy": "Bebas Neue for hooks, Montserrat Bold for body"
+      }
+    },
+    {
+      "id": "tiktok-quote-card-001",
+      "template_name": "TikTok Quote Card",
+      "platform": "TikTok",
+      "format": "1080x1920",
+      "layout_description": {
+        "margins": {
+          "top": "200px",
+          "bottom": "160px",
+          "left": "80px",
+          "right": "80px"
+        },
+        "spacing": {
+          "between_elements": "60px",
+          "line_height": "1.4"
+        },
+        "alignment": {
+          "quote": "center",
+          "footer": "center"
+        },
+        "content_structure": {
+          "top_spacer": "200px",
+          "quote_area": "Centered, flexible height",
+          "spacer": "60px",
+          "footer_area": "Fixed bottom 80px"
+        }
+      },
+      "fonts": {
+        "quote": {
+          "name": "Anton",
+          "weight": "Regular",
+          "size": "56px",
+          "style": "Regular"
+        },
+        "footer": {
+          "name": "Montserrat",
+          "weight": "Light",
+          "size": "18px",
+          "style": "Regular"
+        }
+      },
+      "colors": {
+        "background": "#000000",
+        "quote_text": "#FFFFFF",
+        "accent": "#D4AF37",
+        "footer": "#999999"
+      },
+      "background_style": {
+        "type": "dark_minimal",
+        "description": "Solid black background with optional subtle radial gradient",
+        "gradient": {
+          "enabled": false,
+          "colors": ["#000000", "#1A1A1A"],
+          "type": "radial",
+          "opacity": 20
+        }
+      },
+      "text_styles": {
+        "quote": {
+          "size": "56px",
+          "weight": "Regular",
+          "color": "#FFFFFF",
+          "line_height": "1.4",
+          "letter_spacing": "1px",
+          "text_align": "center",
+          "max_width": "900px",
+          "text_transform": "none"
+        },
+        "footer": {
+          "size": "18px",
+          "weight": "Light",
+          "color": "#999999",
+          "line_height": "1.5",
+          "letter_spacing": "1.5px",
+          "text_align": "center",
+          "text_transform": "lowercase"
+        }
+      },
+      "footer_placement": {
+        "position": "absolute",
+        "bottom": "80px",
+        "left": "50%",
+        "transform": "translateX(-50%)",
+        "width": "auto",
+        "alignment": "center",
+        "font_size": "18px",
+        "color": "#999999",
+        "letter_spacing": "1.5px",
+        "required": true,
+        "always_visible": true
+      },
+      "image_placeholder": {
+        "enabled": false,
+        "description": "Text-only quote card"
+      },
+      "brand_consistency_rules": {
+        "vertical_optimization": "Designed for TikTok's 9:16 format",
+        "large_text": "56px Anton for maximum impact",
+        "footer_prominence": "18px footer, always visible",
+        "spacing": "200px top, 80px bottom for safe zones",
+        "high_contrast": "White on black for mobile readability"
+      }
+    },
+    {
+      "id": "reels-cover-thumbnail-001",
+      "template_name": "Instagram Reels Cover Thumbnail",
+      "platform": "Instagram Reels",
+      "format": "1080x1920",
+      "layout_description": {
+        "margins": {
+          "top": "100px",
+          "bottom": "120px",
+          "left": "60px",
+          "right": "60px"
+        },
+        "spacing": {
+          "between_elements": "40px"
+        },
+        "alignment": {
+          "hook": "center",
+          "footer": "center"
+        },
+        "content_structure": {
+          "top_area": "Hook text (prominent)",
+          "middle_area": "Optional subtitle or key phrase",
+          "bottom_area": "Footer (fixed)"
+        }
+      },
+      "fonts": {
+        "hook": {
+          "name": "Bebas Neue",
+          "weight": "Regular",
+          "size": "72px",
+          "style": "Regular"
+        },
+        "subtitle": {
+          "name": "Montserrat",
+          "weight": "Bold",
+          "size": "32px",
+          "style": "Regular"
+        },
+        "footer": {
+          "name": "Montserrat",
+          "weight": "Light",
+          "size": "16px",
+          "style": "Regular"
+        }
+      },
+      "colors": {
+        "background": "#1A1A1A",
+        "hook_text": "#FFFFFF",
+        "accent": "#D4AF37",
+        "subtitle": "#D4AF37",
+        "footer": "#999999"
+      },
+      "background_style": {
+        "type": "dark_with_accent",
+        "description": "Deep charcoal background (#1A1A1A) with optional gold accent gradient",
+        "gradient": {
+          "enabled": false,
+          "colors": ["#1A1A1A", "#2A2A2A"],
+          "direction": "vertical",
+          "opacity": 50
+        },
+        "accent_element": {
+          "enabled": false,
+          "type": "bottom_border",
+          "color": "#D4AF37",
+          "height": "4px",
+          "width": "60%",
+          "position": "bottom, centered"
+        }
+      },
+      "text_styles": {
+        "hook": {
+          "size": "72px",
+          "weight": "Regular",
+          "color": "#FFFFFF",
+          "line_height": "1.2",
+          "letter_spacing": "3px",
+          "text_align": "center",
+          "text_transform": "uppercase",
+          "max_width": "900px"
+        },
+        "subtitle": {
+          "size": "32px",
+          "weight": "Bold",
+          "color": "#D4AF37",
+          "line_height": "1.4",
+          "letter_spacing": "1px",
+          "text_align": "center"
+        },
+        "footer": {
+          "size": "16px",
+          "weight": "Light",
+          "color": "#999999",
+          "line_height": "1.5",
+          "letter_spacing": "1px",
+          "text_align": "center",
+          "text_transform": "lowercase"
+        }
+      },
+      "footer_placement": {
+        "position": "absolute",
+        "bottom": "60px",
+        "left": "50%",
+        "transform": "translateX(-50%)",
+        "width": "auto",
+        "alignment": "center",
+        "font_size": "16px",
+        "color": "#999999",
+        "letter_spacing": "1px",
+        "required": true,
+        "always_visible": true
+      },
+      "image_placeholder": {
+        "enabled": false,
+        "description": "Text-only thumbnail design"
+      },
+      "brand_consistency_rules": {
+        "reels_optimization": "Designed for Instagram Reels 9:16 format",
+        "hook_prominence": "72px Bebas Neue for maximum impact in feed",
+        "dark_theme": "Charcoal background for brand consistency",
+        "gold_accent": "Optional gold (#D4AF37) for subtitle or accent",
+        "footer_required": "Always present, 16px Montserrat Light",
+        "spacing": "100px top, 60px bottom for safe zones"
+      }
+    }
+  ],
+  "global_brand_guidelines": {
+    "color_palette": {
+      "primary_dark": "#1A1A1A",
+      "primary_text": "#4A4A4A",
+      "accent_gold": "#D4AF37",
+      "background_white": "#FFFFFF",
+      "background_dark": "#000000",
+      "footer_gray": "#6B6B6B",
+      "footer_light": "#999999"
+    },
+    "font_hierarchy": {
+      "display_fonts": ["Bebas Neue", "Anton"],
+      "body_fonts": ["Montserrat", "Playfair Display"],
+      "usage": "Display fonts for hooks/titles, body fonts for content"
+    },
+    "footer_specifications": {
+      "always_required": true,
+      "text": "www.ansiloboff.com",
+      "case": "lowercase",
+      "letter_spacing": "1px minimum",
+      "position": "Bottom-center preferred",
+      "minimum_size": "12px",
+      "color": "#6B6B6B (light) or #999999 (dark backgrounds)"
+    },
+    "spacing_system": {
+      "unit": "20px base unit",
+      "margins": "60-120px depending on format",
+      "element_spacing": "30-40px between major elements",
+      "footer_margin": "30-80px from bottom edge"
+    },
+    "content_style": {
+      "tone": "Minimalist, elegant, faith-deconstruction focused",
+      "emotional_resonance": "Healing, empowering, transformative",
+      "readability": "High contrast, clear hierarchy",
+      "accessibility": "WCAG AA compliant color contrasts"
+    }
+  }
+}
+
+

@@ -238,3 +238,5 @@ If you want to maximize volume and accessibility:
 
 *Last Updated: Based on 2024-2025 Amazon KDP royalty structure and market research*
 
+
+
