@@ -40,20 +40,34 @@ Based on research of similar books in the religious/spiritual deconstruction gen
 
 ## Book-by-Book Pricing Recommendations
 
-### Book 1: Liberating Humanity (258 pages)
+### Book 1: Liberating Humanity (247 pages)
 **Positioning:** Core book, foundational content, substantial length
 
 | Format | Recommended Price | Rationale |
 |--------|------------------|-----------|
-| **eBook** | **$8.99** | Premium positioning, substantial content, within 70% royalty range |
-| **Paperback** | **$16.99** | Above $9.99 threshold for 60% royalty, reflects substantial page count |
-| **Hardcover** | **$24.99** | Premium format, ~$8 above paperback |
+| **eBook** | **$4.99** (Launch) → **$6.99** (Post-Launch) | Launch price for initial visibility and reviews, then increase to standard price. Both prices qualify for 70% royalty range ($2.99-$9.99) |
+| **Paperback** | **$14.99** | Above $9.99 threshold for 60% royalty, reflects substantial page count |
+| **Hardcover** | **$22.99** | Premium format, ~$8 above paperback |
 
-**Profit Estimate (Paperback at $16.99):**
-- List Price: $16.99
-- Printing Cost: ~$5.00 (estimated for 258 pages)
-- Royalty (60%): $10.19
-- Your Earnings: $10.19 - $5.00 = **$5.19 per book**
+**Profit Estimates:**
+
+**eBook (Launch at $4.99):**
+- List Price: $4.99
+- Delivery Cost: ~$0.01-$0.15 (depends on file size)
+- Royalty (70%): $3.49 (minus delivery cost)
+- Your Earnings: **~$3.34-$3.48 per book** (estimated)
+
+**eBook (Post-Launch at $6.99):**
+- List Price: $6.99
+- Delivery Cost: ~$0.01-$0.15 (depends on file size)
+- Royalty (70%): $4.89 (minus delivery cost)
+- Your Earnings: **~$4.74-$4.88 per book** (estimated)
+
+**Paperback (at $14.99):**
+- List Price: $14.99
+- Printing Cost: $3.96 (actual Amazon KDP cost for 247 pages, US marketplace)
+- Royalty (60%): $8.99
+- Your Earnings: $8.99 - $3.96 = **$5.03 per book**
 
 ---
 
@@ -96,9 +110,9 @@ Based on research of similar books in the religious/spiritual deconstruction gen
 
 | Format | Recommended Price | Rationale |
 |--------|------------------|-----------|
-| **eBook** | **$8.99** | Premium positioning, matches Book 1 pricing for consistency |
-| **Paperback** | **$16.99** | Matches Book 1 pricing, reflects similar page count |
-| **Hardcover** | **$24.99** | Premium format, consistent with Book 1 |
+| **eBook** | **$8.99** | Premium positioning, reflects similar page count to Book 1 |
+| **Paperback** | **$16.99** | Above $9.99 threshold for 60% royalty, reflects similar page count |
+| **Hardcover** | **$24.99** | Premium format, consistent pricing for similar length |
 
 **Profit Estimate (Paperback at $16.99):**
 - List Price: $16.99
@@ -129,7 +143,7 @@ Based on research of similar books in the religious/spiritual deconstruction gen
 
 If you want to maximize volume and accessibility:
 
-| Format | Short Books (162-165 pages) | Medium Books (258-260 pages) | Long Book (341 pages) |
+| Format | Short Books (162-165 pages) | Medium Books (247-260 pages) | Long Book (341 pages) |
 |--------|----------------------------|------------------------------|----------------------|
 | **eBook** | $6.99 | $7.99 | $8.99 |
 | **Paperback** | $13.99 | $15.99 | $17.99 |
@@ -163,11 +177,14 @@ If you want to maximize volume and accessibility:
 ### 4. **Price Consistency**
    - Group books by similar page counts for consistent pricing
    - Short books (162-165 pages): $7.99/$14.99/$22.99
-   - Medium books (258-260 pages): $8.99/$16.99/$24.99
+   - Medium books (247-260 pages): $6.99-$8.99/$14.99-$16.99/$22.99-$24.99
+     - Liberating Humanity (247 pages): $6.99/$14.99/$22.99
+     - Reality Unveiled (260 pages): $8.99/$16.99/$24.99
    - Long book (341 pages): $9.99/$18.99/$26.99
 
 ### 5. **Launch Strategy**
-   - Consider launching eBooks at $6.99-$7.99 for first 30-60 days
+   - **Liberating Humanity:** Launching at $4.99 for initial visibility and reviews, then increasing to $6.99 after a few weeks
+   - Consider launching other eBooks at $6.99-$7.99 for first 30-60 days
    - Increase to recommended prices after initial launch period
    - Use KDP Select promotions (free days, countdown deals) strategically
 
@@ -216,13 +233,16 @@ If you want to maximize volume and accessibility:
 
 | Book | Pages | eBook | Paperback | Hardcover |
 |------|-------|-------|-----------|-----------|
-| **Liberating Humanity** | 258 | $8.99 | $16.99 | $24.99 |
+| **Liberating Humanity** | 247 | $4.99* → $6.99 | $14.99 | $22.99 |
+*Launch price, increases to $6.99 after initial period
 | **Escape the Hell Myth** | 165 | $7.99 | $14.99 | $22.99 |
 | **101 Bible Contradictions** | 341 | $9.99 | $18.99 | $26.99 |
 | **Reality Unveiled** | 260 | $8.99 | $16.99 | $24.99 |
 | **Framing Jesus** | 162 | $7.99 | $14.99 | $22.99 |
 
-**Total Series Value:** $44.95 (eBook) | $82.95 (Paperback) | $121.95 (Hardcover)
+**Total Series Value:** 
+- **Launch Period (Liberating Humanity at $4.99):** $40.95 (eBook) | $80.95 (Paperback) | $119.95 (Hardcover)
+- **Post-Launch (Liberating Humanity at $6.99):** $42.95 (eBook) | $80.95 (Paperback) | $119.95 (Hardcover)
 
 ---
 
