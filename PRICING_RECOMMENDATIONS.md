@@ -71,20 +71,28 @@ Based on research of similar books in the religious/spiritual deconstruction gen
 
 ---
 
-### Book 2: Escape the Hell Myth (165 pages)
-**Positioning:** Shorter, focused topic, accessible entry point
+### Book 2: Escape the Hell Myth (225 pages)
+**Positioning:** Medium length, focused topic, accessible entry point (includes book promotion pages)
 
 | Format | Recommended Price | Rationale |
 |--------|------------------|-----------|
-| **eBook** | **$7.99** | Accessible price point, still premium, within 70% royalty range |
-| **Paperback** | **$14.99** | Above $9.99 threshold, reflects shorter length vs Book 1 |
+| **eBook** | **$4.99** | Launch-friendly price point, substantial content, within 70% royalty range ($2.99-$9.99) |
+| **Paperback** | **$14.99** | Above $9.99 threshold for 60% royalty, reflects substantial page count |
 | **Hardcover** | **$22.99** | Premium format, ~$8 above paperback |
 
-**Profit Estimate (Paperback at $14.99):**
+**Profit Estimates:**
+
+**eBook (at $4.99):**
+- List Price: $4.99
+- Delivery Cost: ~$0.01-$0.15 (depends on file size)
+- Royalty (70%): $3.49 (minus delivery cost)
+- Your Earnings: **~$3.34-$3.48 per book** (estimated)
+
+**Paperback (at $14.99):**
 - List Price: $14.99
-- Printing Cost: ~$4.00 (estimated for 165 pages)
+- Printing Cost: ~$3.75 (estimated for 225 pages, based on Book 1's $3.96 for 247 pages)
 - Royalty (60%): $8.99
-- Your Earnings: $8.99 - $4.00 = **$4.99 per book**
+- Your Earnings: $8.99 - $3.75 = **$5.24 per book**
 
 ---
 
@@ -127,9 +135,9 @@ Based on research of similar books in the religious/spiritual deconstruction gen
 
 | Format | Recommended Price | Rationale |
 |--------|------------------|-----------|
-| **eBook** | **$7.99** | Accessible price point, matches Book 2 pricing for consistency |
-| **Paperback** | **$14.99** | Matches Book 2 pricing, reflects similar page count |
-| **Hardcover** | **$22.99** | Premium format, consistent with Book 2 |
+| **eBook** | **$7.99** | Accessible price point, reflects shorter page count |
+| **Paperback** | **$14.99** | Above $9.99 threshold for 60% royalty, reflects shorter page count |
+| **Hardcover** | **$22.99** | Premium format, consistent pricing for shorter books |
 
 **Profit Estimate (Paperback at $14.99):**
 - List Price: $14.99
@@ -143,8 +151,8 @@ Based on research of similar books in the religious/spiritual deconstruction gen
 
 If you want to maximize volume and accessibility:
 
-| Format | Short Books (162-165 pages) | Medium Books (247-260 pages) | Long Book (341 pages) |
-|--------|----------------------------|------------------------------|----------------------|
+| Format | Short Books (162 pages) | Medium Books (225-260 pages) | Long Book (341 pages) |
+|--------|-------------------------|------------------------------|----------------------|
 | **eBook** | $6.99 | $7.99 | $8.99 |
 | **Paperback** | $13.99 | $15.99 | $17.99 |
 | **Hardcover** | $21.99 | $23.99 | $25.99 |
@@ -176,8 +184,9 @@ If you want to maximize volume and accessibility:
 
 ### 4. **Price Consistency**
    - Group books by similar page counts for consistent pricing
-   - Short books (162-165 pages): $7.99/$14.99/$22.99
-   - Medium books (247-260 pages): $6.99-$8.99/$14.99-$16.99/$22.99-$24.99
+   - Short books (162 pages): $7.99/$14.99/$22.99
+   - Medium books (225-260 pages): $6.99-$8.99/$14.99-$16.99/$22.99-$24.99
+     - Escape the Hell Myth (225 pages): $4.99/$14.99/$22.99
      - Liberating Humanity (247 pages): $6.99/$14.99/$22.99
      - Reality Unveiled (260 pages): $8.99/$16.99/$24.99
    - Long book (341 pages): $9.99/$18.99/$26.99
@@ -235,14 +244,14 @@ If you want to maximize volume and accessibility:
 |------|-------|-------|-----------|-----------|
 | **Liberating Humanity** | 247 | $4.99* → $6.99 | $14.99 | $22.99 |
 *Launch price, increases to $6.99 after initial period
-| **Escape the Hell Myth** | 165 | $7.99 | $14.99 | $22.99 |
+| **Escape the Hell Myth** | 225 | $4.99 | $14.99 | $22.99 |
 | **101 Bible Contradictions** | 341 | $9.99 | $18.99 | $26.99 |
 | **Reality Unveiled** | 260 | $8.99 | $16.99 | $24.99 |
 | **Framing Jesus** | 162 | $7.99 | $14.99 | $22.99 |
 
 **Total Series Value:** 
-- **Launch Period (Liberating Humanity at $4.99):** $40.95 (eBook) | $80.95 (Paperback) | $119.95 (Hardcover)
-- **Post-Launch (Liberating Humanity at $6.99):** $42.95 (eBook) | $80.95 (Paperback) | $119.95 (Hardcover)
+- **Launch Period (Books 1 & 2 at launch prices):** $37.95 (eBook) | $80.95 (Paperback) | $119.95 (Hardcover)
+- **Post-Launch (Book 1 at $6.99, Book 2 at $4.99):** $39.95 (eBook) | $80.95 (Paperback) | $119.95 (Hardcover)
 
 ---
 
