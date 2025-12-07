@@ -96,20 +96,20 @@ Based on research of similar books in the religious/spiritual deconstruction gen
 
 ---
 
-### Book 3: 101 Bible Contradictions (341 pages)
+### Book 3: 101 Bible Contradictions (378 pages)
 **Positioning:** Longest book, reference-style, comprehensive content
 
 | Format | Recommended Price | Rationale |
 |--------|------------------|-----------|
-| **eBook** | **$9.99** | Maximum 70% royalty price point, reflects comprehensive content |
+| **eBook** | **$7.99** | Accessible price point, substantial content, within 70% royalty range ($2.99-$9.99) |
 | **Paperback** | **$18.99** | Premium pricing justified by length and reference value |
-| **Hardcover** | **$26.99** | Premium format, reflects substantial reference book |
+| **Hardcover** | **$24.99** | Premium format, reflects substantial reference book |
 
 **Profit Estimate (Paperback at $18.99):**
 - List Price: $18.99
-- Printing Cost: ~$6.50 (estimated for 341 pages)
+- Printing Cost: $5.54 (actual Amazon KDP cost for 378 pages, US marketplace)
 - Royalty (60%): $11.39
-- Your Earnings: $11.39 - $6.50 = **$4.89 per book**
+- Your Earnings: $11.39 - $5.54 = **$5.85 per book**
 
 ---
 
@@ -151,7 +151,7 @@ Based on research of similar books in the religious/spiritual deconstruction gen
 
 If you want to maximize volume and accessibility:
 
-| Format | Short Books (162 pages) | Medium Books (225-260 pages) | Long Book (341 pages) |
+| Format | Short Books (162 pages) | Medium Books (225-260 pages) | Long Book (378 pages) |
 |--------|-------------------------|------------------------------|----------------------|
 | **eBook** | $6.99 | $7.99 | $8.99 |
 | **Paperback** | $13.99 | $15.99 | $17.99 |
@@ -189,7 +189,7 @@ If you want to maximize volume and accessibility:
      - Escape the Hell Myth (225 pages): $4.99/$14.99/$22.99
      - Liberating Humanity (247 pages): $6.99/$14.99/$22.99
      - Reality Unveiled (260 pages): $8.99/$16.99/$24.99
-   - Long book (341 pages): $9.99/$18.99/$26.99
+   - Long book (378 pages): $7.99/$18.99/$24.99
 
 ### 5. **Launch Strategy**
    - **Liberating Humanity:** Launching at $4.99 for initial visibility and reviews, then increasing to $6.99 after a few weeks
@@ -245,13 +245,13 @@ If you want to maximize volume and accessibility:
 | **Liberating Humanity** | 247 | $4.99* → $6.99 | $14.99 | $22.99 |
 *Launch price, increases to $6.99 after initial period
 | **Escape the Hell Myth** | 225 | $4.99 | $14.99 | $22.99 |
-| **101 Bible Contradictions** | 341 | $9.99 | $18.99 | $26.99 |
+| **101 Bible Contradictions** | 378 | $7.99 | $18.99 | $24.99 |
 | **Reality Unveiled** | 260 | $8.99 | $16.99 | $24.99 |
 | **Framing Jesus** | 162 | $7.99 | $14.99 | $22.99 |
 
 **Total Series Value:** 
-- **Launch Period (Books 1 & 2 at launch prices):** $37.95 (eBook) | $80.95 (Paperback) | $119.95 (Hardcover)
-- **Post-Launch (Book 1 at $6.99, Book 2 at $4.99):** $39.95 (eBook) | $80.95 (Paperback) | $119.95 (Hardcover)
+- **Launch Period (Books 1 & 2 at launch prices):** $32.95 (eBook) | $80.95 (Paperback) | $118.95 (Hardcover)
+- **Post-Launch (Book 1 at $6.99, Book 2 at $4.99):** $34.95 (eBook) | $80.95 (Paperback) | $118.95 (Hardcover)
 
 ---
 
