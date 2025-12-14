@@ -68,10 +68,10 @@ export function getAllBooks(): BookMetadata[] {
         if (Array.isArray(enhancedMetadata.tags)) {
           tags = enhancedMetadata.tags;
         } else if (typeof enhancedMetadata.tags === 'string') {
-          tags = enhancedMetadata.tags.split(',').map(t => t.trim()).filter(t => t.length > 0);
+          tags = enhancedMetadata.tags.split(',').map((t: string) => t.trim()).filter((t: string) => t.length > 0);
         }
       } else if (bookData.tags && typeof bookData.tags === 'string') {
-        tags = bookData.tags.split(',').map(t => t.trim()).filter(t => t.length > 0);
+        tags = bookData.tags.split(',').map((t: string) => t.trim()).filter((t: string) => t.length > 0);
       }
       
       // Merge metadata, but prioritize bookData description over enhancedMetadata
