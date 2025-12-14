@@ -113,35 +113,43 @@ Based on research of similar books in the religious/spiritual deconstruction gen
 
 ---
 
-### Book 4: Reality Unveiled (260 pages)
+### Book 5: Reality Unveiled (260 pages)
 **Positioning:** Similar length to Book 1, transformative content
 
 | Format | Recommended Price | Rationale |
 |--------|------------------|-----------|
-| **eBook** | **$8.99** | Premium positioning, reflects similar page count to Book 1 |
-| **Paperback** | **$16.99** | Above $9.99 threshold for 60% royalty, reflects similar page count |
-| **Hardcover** | **$24.99** | Premium format, consistent pricing for similar length |
+| **eBook** | **$6.99** | Accessible price point, substantial content, within 70% royalty range ($2.99-$9.99) |
+| **Paperback** | **$14.99** | Above $9.99 threshold for 60% royalty, reflects similar page count |
+| **Hardcover** | **$22.99** | Premium format, consistent pricing for similar length |
 
-**Profit Estimate (Paperback at $16.99):**
-- List Price: $16.99
+**Profit Estimates:**
+
+**eBook (at $6.99):**
+- List Price: $6.99
+- Delivery Cost: ~$0.01-$0.15 (depends on file size)
+- Royalty (70%): $4.89 (minus delivery cost)
+- Your Earnings: **~$4.74-$4.88 per book** (estimated)
+
+**Paperback (at $14.99):**
+- List Price: $14.99
 - Printing Cost: ~$5.00 (estimated for 260 pages)
-- Royalty (60%): $10.19
-- Your Earnings: $10.19 - $5.00 = **$5.19 per book**
+- Royalty (60%): $8.99
+- Your Earnings: $8.99 - $5.00 = **$3.99 per book**
 
 ---
 
-### Book 5: Framing Jesus (162 pages)
+### Book 4: Framing Jesus (229 pages)
 **Positioning:** Shortest book, focused topic, accessible entry point
 
 | Format | Recommended Price | Rationale |
 |--------|------------------|-----------|
-| **eBook** | **$7.99** | Accessible price point, reflects shorter page count |
+| **eBook** | **$6.99** | Accessible price point, reflects shorter page count |
 | **Paperback** | **$14.99** | Above $9.99 threshold for 60% royalty, reflects shorter page count |
 | **Hardcover** | **$22.99** | Premium format, consistent pricing for shorter books |
 
 **Profit Estimate (Paperback at $14.99):**
 - List Price: $14.99
-- Printing Cost: ~$4.00 (estimated for 162 pages)
+- Printing Cost: ~$4.00 (estimated for 229 pages)
 - Royalty (60%): $8.99
 - Your Earnings: $8.99 - $4.00 = **$4.99 per book**
 
@@ -188,7 +196,7 @@ If you want to maximize volume and accessibility:
    - Medium books (225-260 pages): $6.99-$8.99/$14.99-$16.99/$22.99-$24.99
      - Escape the Hell Myth (225 pages): $4.99/$14.99/$22.99
      - Liberating Humanity (247 pages): $6.99/$14.99/$22.99
-     - Reality Unveiled (260 pages): $8.99/$16.99/$24.99
+     - Reality Unveiled (260 pages): $6.99/$14.99/$22.99
    - Long book (378 pages): $7.99/$18.99/$24.99
 
 ### 5. **Launch Strategy**
@@ -246,12 +254,12 @@ If you want to maximize volume and accessibility:
 *Launch price, increases to $6.99 after initial period
 | **Escape the Hell Myth** | 225 | $4.99 | $14.99 | $22.99 |
 | **101 Bible Contradictions** | 378 | $7.99 | $18.99 | $24.99 |
-| **Reality Unveiled** | 260 | $8.99 | $16.99 | $24.99 |
-| **Framing Jesus** | 162 | $7.99 | $14.99 | $22.99 |
+| **Reality Unveiled** | 260 | $6.99 | $14.99 | $22.99 |
+| **Framing Jesus** | 229 | $6.99 | $14.99 | $22.99 |
 
 **Total Series Value:** 
-- **Launch Period (Books 1 & 2 at launch prices):** $32.95 (eBook) | $80.95 (Paperback) | $118.95 (Hardcover)
-- **Post-Launch (Book 1 at $6.99, Book 2 at $4.99):** $34.95 (eBook) | $80.95 (Paperback) | $118.95 (Hardcover)
+- **Launch Period (Books 1 & 2 at launch prices):** $30.95 (eBook) | $78.95 (Paperback) | $116.95 (Hardcover)
+- **Post-Launch (Book 1 at $6.99, Book 2 at $4.99):** $32.95 (eBook) | $78.95 (Paperback) | $116.95 (Hardcover)
 
 ---
 

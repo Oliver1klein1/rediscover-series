@@ -3,14 +3,14 @@
 ## Bundle Strategy Overview
 
 **Individual Book Prices (Reference):**
-- **eBooks:** $4.99 - $8.99 each
+- **eBooks:** $4.99 - $7.99 each
 - **Paperbacks:** $14.99 - $18.99 each
 - **Hardcovers:** $22.99 - $24.99 each
 
 **Total Individual Value:**
-- eBooks: $34.95 (with Book 1 & 2 at launch prices)
-- Paperbacks: $80.95
-- Hardcovers: $118.95
+- eBooks: $32.95 (with Book 1 & 2 at launch prices)
+- Paperbacks: $78.95
+- Hardcovers: $116.95
 
 ---
 
@@ -32,27 +32,27 @@
 ## Complete Series Bundle (All 5 Books)
 
 ### eBook Bundle
-**Individual Total:** $34.95 (with Book 1 & 2 at launch prices)  
-**Recommended Bundle Price:** **$26.99** (23% discount)
+**Individual Total:** $32.95 (with Book 1 & 2 at launch prices)  
+**Recommended Bundle Price:** **$24.99** (24% discount)
 
 **Rationale:**
-- Strong discount (23%) encourages complete series purchase
-- Under $30 psychological threshold
+- Strong discount (24%) encourages complete series purchase
+- Under $25 psychological threshold
 - Saves customer $7.96 vs. buying individually
 - High perceived value
 
 **Alternative Options:**
-- **$28.99** (17% discount) - More conservative, higher margin
-- **$24.99** (29% discount) - More aggressive, maximum value perception
-- **$31.99** (9% discount) - Minimal discount, premium positioning
+- **$26.99** (18% discount) - More conservative, higher margin
+- **$22.99** (30% discount) - More aggressive, maximum value perception
+- **$29.99** (9% discount) - Minimal discount, premium positioning
 
-**Recommendation:** **$26.99** - Best balance of value and margin
+**Recommendation:** **$24.99** - Best balance of value and margin
 
 ---
 
 ### Paperback Bundle
-**Individual Total:** $80.95  
-**Recommended Bundle Price:** **$62.99** (22% discount)
+**Individual Total:** $78.95  
+**Recommended Bundle Price:** **$60.99** (23% discount)
 
 **Rationale:**
 - Matches eBook bundle discount percentage
@@ -61,17 +61,17 @@
 - Significant value for physical books
 
 **Alternative Options:**
-- **$67.99** (16% discount) - More conservative
-- **$57.99** (28% discount) - More aggressive, maximum value
-- **$72.99** (10% discount) - Minimal discount
+- **$65.99** (16% discount) - More conservative
+- **$55.99** (29% discount) - More aggressive, maximum value
+- **$70.99** (10% discount) - Minimal discount
 
-**Recommendation:** **$62.99** - Consistent with eBook bundle strategy
+**Recommendation:** **$60.99** - Consistent with eBook bundle strategy
 
 ---
 
 ### Hardcover Bundle
-**Individual Total:** $118.95  
-**Recommended Bundle Price:** **$91.99** (23% discount)
+**Individual Total:** $116.95  
+**Recommended Bundle Price:** **$89.99** (23% discount)
 
 **Rationale:**
 - Consistent discount percentage across formats
@@ -80,13 +80,13 @@
 - Premium collector's bundle
 
 **Alternative Options:**
-- **$96.99** (18% discount) - Just under $100, premium feel
-- **$86.99** (27% discount) - More aggressive
-- **$101.99** (14% discount) - More conservative
+- **$94.99** (19% discount) - Just under $100, premium feel
+- **$84.99** (27% discount) - More aggressive
+- **$99.99** (15% discount) - More conservative
 
-**Recommendation:** **$91.99** or **$96.99** - Both strong options
-- **$91.99** = Maximum value perception
-- **$96.99** = Premium positioning, just under $100
+**Recommendation:** **$89.99** or **$94.99** - Both strong options
+- **$89.99** = Maximum value perception
+- **$94.99** = Premium positioning, just under $100
 
 ---
 
@@ -123,7 +123,7 @@
 **Individual Total:**
 - eBooks: $23.97 ($6.99 + $7.99 + $8.99) - with Book 1 at post-launch price
 - Paperbacks: $50.97 ($14.99 + $18.99 + $16.99)
-- Hardcovers: $72.97 ($22.99 + $24.99 + $24.99)
+- Hardcovers: $70.97 ($22.99 + $24.99 + $22.99)
 
 ### eBook Bundle: **$18.99** (21% discount)
 **Alternative:** $20.99 (13% discount) or $17.99 (25% discount)
@@ -131,8 +131,8 @@
 ### Paperback Bundle: **$39.99** (22% discount)
 **Alternative:** $42.99 (16% discount) or $37.99 (25% discount)
 
-### Hardcover Bundle: **$56.99** (22% discount)
-**Alternative:** $61.99 (15% discount) or $53.99 (26% discount)
+### Hardcover Bundle: **$54.99** (22% discount)
+**Alternative:** $59.99 (15% discount) or $51.99 (27% discount)
 
 ---
 
@@ -165,9 +165,9 @@
 - Book 4: Reality Unveiled (260 pages)
 
 **Individual Total:**
-- eBooks: $16.98 ($7.99 + $8.99)
-- Paperbacks: $35.98 ($18.99 + $16.99)
-- Hardcovers: $49.98 ($24.99 + $24.99)
+- eBooks: $14.98 ($7.99 + $6.99)
+- Paperbacks: $33.98 ($18.99 + $14.99)
+- Hardcovers: $47.98 ($24.99 + $22.99)
 
 ### eBook Bundle: **$12.99** (23% discount)
 **Alternative:** $13.99 (18% discount) or $11.99 (29% discount)
@@ -175,8 +175,8 @@
 ### Paperback Bundle: **$28.99** (19% discount)
 **Alternative:** $29.99 (17% discount) or $27.99 (22% discount)
 
-### Hardcover Bundle: **$39.99** (20% discount)
-**Alternative:** $41.99 (16% discount) or $37.99 (24% discount)
+### Hardcover Bundle: **$37.99** (21% discount)
+**Alternative:** $39.99 (17% discount) or $35.99 (25% discount)
 
 ---
 
@@ -184,21 +184,21 @@
 
 | Bundle | Format | Individual Total | Bundle Price | Discount | Savings |
 |--------|--------|-----------------|--------------|----------|---------|
-| **Complete Series (5 books)** | eBook | $34.95 | **$26.99** | 23% | $7.96 |
-| **Complete Series (5 books)** | Paperback | $80.95 | **$62.99** | 22% | $17.96 |
-| **Complete Series (5 books)** | Hardcover | $118.95 | **$91.99** | 23% | $26.96 |
+| **Complete Series (5 books)** | eBook | $32.95 | **$24.99** | 24% | $7.96 |
+| **Complete Series (5 books)** | Paperback | $78.95 | **$60.99** | 23% | $17.96 |
+| **Complete Series (5 books)** | Hardcover | $116.95 | **$89.99** | 23% | $26.96 |
 | **Core Trilogy (1, 2, 5)** | eBook | $17.97 | **$13.99** | 22% | $3.98 |
 | **Core Trilogy (1, 2, 5)** | Paperback | $44.97 | **$35.99** | 20% | $8.98 |
 | **Core Trilogy (1, 2, 5)** | Hardcover | $68.97 | **$54.99** | 20% | $13.98 |
-| **Deep Dive (1, 3, 4)** | eBook | $23.97 | **$18.99** | 21% | $4.98 |
-| **Deep Dive (1, 3, 4)** | Paperback | $50.97 | **$39.99** | 22% | $10.98 |
-| **Deep Dive (1, 3, 4)** | Hardcover | $72.97 | **$56.99** | 22% | $15.98 |
+| **Deep Dive (1, 3, 4)** | eBook | $21.97 | **$16.99** | 23% | $4.98 |
+| **Deep Dive (1, 3, 4)** | Paperback | $48.97 | **$37.99** | 22% | $10.98 |
+| **Deep Dive (1, 3, 4)** | Hardcover | $70.97 | **$54.99** | 22% | $15.98 |
 | **Starter (2, 5)** | eBook | $12.98 | **$9.99** | 23% | $2.99 |
 | **Starter (2, 5)** | Paperback | $29.98 | **$24.99** | 17% | $4.99 |
 | **Starter (2, 5)** | Hardcover | $45.98 | **$37.99** | 17% | $7.99 |
-| **Advanced (3, 4)** | eBook | $16.98 | **$12.99** | 23% | $3.99 |
-| **Advanced (3, 4)** | Paperback | $35.98 | **$28.99** | 19% | $6.99 |
-| **Advanced (3, 4)** | Hardcover | $49.98 | **$39.99** | 20% | $9.99 |
+| **Advanced (3, 4)** | eBook | $14.98 | **$11.99** | 20% | $2.99 |
+| **Advanced (3, 4)** | Paperback | $33.98 | **$26.99** | 21% | $6.99 |
+| **Advanced (3, 4)** | Hardcover | $47.98 | **$37.99** | 21% | $9.99 |
 
 ---
 
@@ -317,8 +317,8 @@
 ### "Complete Collection" (Mixed Format)
 **Option:** eBook + Paperback Bundle
 - Individual: $6.99-$8.99 (eBook) + $14.99-$16.99 (Paperback) = varies per book
-- Complete Series: $34.95 (eBooks) + $80.95 (Paperbacks) = $115.90 total
-- **Bundle Price: $88.99** (23% discount)
+- Complete Series: $32.95 (eBooks) + $78.95 (Paperbacks) = $111.90 total
+- **Bundle Price: $85.99** (23% discount)
 
 **Rationale:** 
 - Appeals to readers who want both formats
@@ -327,8 +327,8 @@
 
 ### "Ultimate Collection" (All Formats)
 **Option:** eBook + Paperback + Hardcover Bundle
-- Individual Total: $242.85
-- **Bundle Price: $183.99** (24% discount)
+- Individual Total: $240.85
+- **Bundle Price: $181.99** (24% discount)
 
 **Rationale:**
 - Premium collector's option
