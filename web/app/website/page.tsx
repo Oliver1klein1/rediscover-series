@@ -1,11 +1,7 @@
-import { Metadata } from 'next';
+'use client';
+
 import Image from 'next/image';
 import Script from 'next/script';
-
-export const metadata: Metadata = {
-  title: "Rediscovering Jesus' Subverted Teachings and the Father's Love",
-  description: "5-Book Series - Rediscover the authentic teachings of Jesus",
-};
 
 // Book data from website/script.js
 const books = [
