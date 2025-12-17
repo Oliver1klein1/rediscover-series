@@ -192,12 +192,21 @@ export default function BookPage({ params }: PageProps) {
         {/* Audiobook Section - Only for Liberating Humanity */}
         {book.slug === 'liberating-humanity' && (
           <div className="mt-12 bg-gray-900 rounded-lg p-8">
-            <h2 className="text-2xl font-bold text-white mb-4">Audiobook</h2>
-            <div className="bg-gray-800 rounded-lg p-6 text-center">
-              <p className="text-gray-400 mb-4">
-                Coming soon
+            <h2 className="text-2xl font-bold text-white mb-4">Audiobook Now Available</h2>
+            <div className="bg-gray-800 rounded-lg p-6">
+              <p className="text-gray-300 mb-4">
+                Prefer to listen?
               </p>
-              <div className="flex justify-center">
+              <p className="text-gray-300 mb-4">
+                <strong><em>Liberating Humanity</em></strong> is now available as a complete, unabridged audiobook, delivered as a single, chapterized M4B file for smooth listening on Apple Books and other audiobook players.
+              </p>
+              <p className="text-gray-300 mb-4">
+                Narrated by <em>Truth Beyond Tradition Voice</em>, this edition preserves the book's intensity, clarity, and confrontational honesty … ideal for reflective listening or deep re-examination of long-held beliefs.
+              </p>
+              <p className="text-gray-300 mb-6">
+                Instant download. DRM-free. <strong>Yours to keep.</strong>
+              </p>
+              <div className="flex justify-center mb-4">
                 <Image
                   src="/audiobook_icon.png"
                   alt="Audiobook icon"
@@ -205,6 +214,16 @@ export default function BookPage({ params }: PageProps) {
                   height={64}
                   className="opacity-80 hover:opacity-100 transition-opacity"
                 />
+              </div>
+              <div className="text-center">
+                <a
+                  href="https://ansiloboff.gumroad.com/l/liberating-humanity-audiobook"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="inline-block bg-yellow-400 text-black text-center px-8 py-3 rounded-lg font-semibold hover:bg-yellow-500 transition"
+                >
+                  Get the Audiobook
+                </a>
               </div>
             </div>
           </div>

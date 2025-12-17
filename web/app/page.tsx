@@ -43,8 +43,15 @@ export default function Home() {
           <div className="flex justify-center mb-12">
             <div className="relative w-full max-w-4xl">
               {/* Logo and Title Section - Aligned with image width */}
-              <div className="flex flex-col md:flex-row items-center md:items-start gap-6 mb-12">
-                <div className="flex-shrink-0">
+              <div className="flex flex-col items-center gap-6 mb-12">
+                <div className="flex-shrink-0 flex items-center gap-4">
+                  <Image
+                    src="/assets/ansilo-boff-avatar-v2.jpg"
+                    alt="Ansilo Boff"
+                    width={100}
+                    height={100}
+                    className="rounded-full opacity-90 hover:opacity-100 transition-opacity duration-300"
+                  />
                   <Image
                     src="/assets/ansilo_boff_logo.jpg?v=3"
                     alt="Ansilo Boff Logo"
@@ -53,12 +60,12 @@ export default function Home() {
                     className="rounded-lg opacity-90 hover:opacity-100 transition-opacity duration-300"
                   />
                 </div>
-                <div className="text-center md:text-left flex-1">
-                  <h1 className="text-5xl md:text-6xl lg:text-7xl font-bold text-white mb-4 leading-tight tracking-tight">
+                <div className="text-center">
+                  <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold text-white mb-6 leading-normal tracking-tight">
                     <span className="block">Rediscovering Jesus'</span>
                     <span className="block text-yellow-400 mt-2">Subverted Teachings</span>
                   </h1>
-                  <p className="text-2xl md:text-3xl lg:text-4xl text-gray-300 mb-2 font-medium italic mt-4">
+                  <p className="text-xl md:text-2xl lg:text-3xl text-gray-300 mb-2 font-medium italic mt-6">
                     and the Father's Love
                   </p>
                   <p className="text-lg md:text-xl text-gray-400 mt-6 font-medium tracking-wide uppercase">5-Book Series</p>

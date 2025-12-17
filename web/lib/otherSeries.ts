@@ -46,8 +46,8 @@ Perfect for bedtime reading, family devotion, or Sunday-school story time, The F
   coverImage: '/assets/other-series/fathers-heart/fh_mockup1112.jpg',
   slug: 'fathers-heart',
   price: {
-    paperback: 14.99,
-    bundle: 64.99,
+    paperback: 8.99,
+    bundle: 39.99,
   },
   books: [
     {
@@ -63,7 +63,7 @@ A tender, hope-filled story that helps children let go of anger, make peace quic
       slug: 'when-my-little-brother-broke-my-toy',
       order: 1,
       price: {
-        paperback: 14.99,
+        paperback: 8.99,
       },
     },
     {
@@ -79,7 +79,7 @@ A heartfelt reminder for every child that mercy always brings the sunshine back.
       slug: 'when-i-decided-i-wont-be-friends-with-oliver-anymore',
       order: 2,
       price: {
-        paperback: 14.99,
+        paperback: 8.99,
       },
     },
     {
@@ -95,7 +95,7 @@ A joyful story that helps kids speak kindly, choose bright "heart-colors," and s
       slug: 'why-saying-bad-words-makes-everyone-sad',
       order: 3,
       price: {
-        paperback: 14.99,
+        paperback: 8.99,
       },
     },
     {
@@ -111,7 +111,7 @@ This comforting story helps children trade fear for trust and discover that true
       slug: 'when-thunder-made-me-hide',
       order: 4,
       price: {
-        paperback: 14.99,
+        paperback: 8.99,
       },
     },
     {
@@ -127,7 +127,7 @@ A beautiful story of generosity, belonging, and the kind of welcome that feels l
       slug: 'when-we-made-room-at-our-table',
       order: 5,
       price: {
-        paperback: 14.99,
+        paperback: 8.99,
       },
     },
   ],
@@ -149,8 +149,8 @@ Whether you're expecting or already holding your miracle, these books are a time
   coverImage: '/assets/other-series/unspoken-dreams/unspoken-hopes-and-dreams-series-mockup.jpg',
   slug: 'unspoken-dreams',
   price: {
-    paperback: 13.99,
-    bundle: 49.99,
+    paperback: 8.99,
+    bundle: 31.99,
   },
   books: [
     {
@@ -167,7 +167,7 @@ A perfect baby shower or bedtime gift … a keepsake to treasure forever.`,
       slug: 'whispers-to-my-unborn-son-mum',
       order: 1,
       price: {
-        paperback: 13.99,
+        paperback: 8.99,
       },
     },
     {
@@ -184,7 +184,7 @@ An unforgettable keepsake for new or expecting fathers … promising wisdom that
       slug: 'whispers-to-my-unborn-son-dad',
       order: 2,
       price: {
-        paperback: 13.99,
+        paperback: 8.99,
       },
     },
     {
@@ -201,7 +201,7 @@ A heartwarming gift for dads welcoming daughters … the beginning of a bond tha
       slug: 'whispers-to-my-unborn-daughter-dad',
       order: 3,
       price: {
-        paperback: 13.99,
+        paperback: 8.99,
       },
     },
     {
@@ -218,7 +218,7 @@ A gift every mum-to-be will cherish … a promise of love wrapped in poetry.`,
       slug: 'whispers-to-my-unborn-daughter-mum',
       order: 4,
       price: {
-        paperback: 13.99,
+        paperback: 8.99,
       },
     },
   ],

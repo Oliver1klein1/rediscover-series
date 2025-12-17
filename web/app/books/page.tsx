@@ -41,7 +41,14 @@ export default function BooksPage() {
       <div className="min-h-screen bg-black py-12">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex flex-col items-center gap-6 mb-12">
-          <div className="flex-shrink-0">
+          <div className="flex-shrink-0 flex items-center gap-4">
+            <Image
+              src="/assets/ansilo-boff-avatar-v2.jpg"
+              alt="Ansilo Boff"
+              width={100}
+              height={100}
+              className="rounded-full opacity-90 hover:opacity-100 transition-opacity duration-300"
+            />
             <Image
               src="/assets/ansilo_boff_logo.jpg?v=3"
               alt="Ansilo Boff Logo"
@@ -51,7 +58,7 @@ export default function BooksPage() {
             />
           </div>
           <div className="text-center">
-            <h1 className="text-4xl md:text-5xl font-bold text-white mb-4">
+            <h1 className="text-4xl md:text-5xl font-bold text-yellow-400 mb-4">
               The Rediscover Series
             </h1>
             <p className="text-xl text-gray-400">

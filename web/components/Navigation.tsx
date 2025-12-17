@@ -33,46 +33,86 @@ export default function Navigation() {
               {seriesTitle}
             </span>
           </Link>
-          <div className="flex items-center space-x-1">
+          <div className="flex items-center space-x-2">
             <Link 
               href="/" 
-              className="relative px-6 py-3 text-gray-300 hover:text-white font-medium transition-all duration-300 group"
+              className={`relative px-6 py-3 font-medium transition-all duration-300 group rounded-lg backdrop-blur-md border ${
+                pathname === '/' 
+                  ? 'bg-yellow-400/20 border-yellow-400/40 text-yellow-400 shadow-lg shadow-yellow-400/20' 
+                  : 'bg-white/5 border-white/10 text-gray-300 hover:text-white hover:bg-white/10 hover:border-yellow-400/30 hover:shadow-lg hover:shadow-yellow-400/10'
+              }`}
             >
               <span className="relative z-10">Home</span>
-              <span className="absolute inset-0 bg-gradient-to-r from-yellow-400/10 to-yellow-600/10 rounded-lg opacity-0 group-hover:opacity-100 transition-opacity duration-300"></span>
-              <span className="absolute bottom-0 left-0 right-0 h-0.5 bg-gradient-to-r from-yellow-400 to-yellow-600 scale-x-0 group-hover:scale-x-100 transition-transform duration-300"></span>
+              {pathname !== '/' && (
+                <>
+                  <span className="absolute inset-0 bg-gradient-to-r from-yellow-400/20 to-yellow-600/20 rounded-lg opacity-0 group-hover:opacity-100 transition-opacity duration-300"></span>
+                  <span className="absolute bottom-0 left-0 right-0 h-0.5 bg-gradient-to-r from-yellow-400 to-yellow-600 scale-x-0 group-hover:scale-x-100 transition-transform duration-300 rounded-full"></span>
+                </>
+              )}
             </Link>
             <Link 
               href="/books" 
-              className="relative px-6 py-3 text-gray-300 hover:text-white font-medium transition-all duration-300 group"
+              className={`relative px-6 py-3 font-medium transition-all duration-300 group rounded-lg backdrop-blur-md border ${
+                pathname === '/books' 
+                  ? 'bg-yellow-400/20 border-yellow-400/40 text-yellow-400 shadow-lg shadow-yellow-400/20' 
+                  : 'bg-white/5 border-white/10 text-gray-300 hover:text-white hover:bg-white/10 hover:border-yellow-400/30 hover:shadow-lg hover:shadow-yellow-400/10'
+              }`}
             >
               <span className="relative z-10">Books</span>
-              <span className="absolute inset-0 bg-gradient-to-r from-yellow-400/10 to-yellow-600/10 rounded-lg opacity-0 group-hover:opacity-100 transition-opacity duration-300"></span>
-              <span className="absolute bottom-0 left-0 right-0 h-0.5 bg-gradient-to-r from-yellow-400 to-yellow-600 scale-x-0 group-hover:scale-x-100 transition-transform duration-300"></span>
+              {pathname !== '/books' && (
+                <>
+                  <span className="absolute inset-0 bg-gradient-to-r from-yellow-400/20 to-yellow-600/20 rounded-lg opacity-0 group-hover:opacity-100 transition-opacity duration-300"></span>
+                  <span className="absolute bottom-0 left-0 right-0 h-0.5 bg-gradient-to-r from-yellow-400 to-yellow-600 scale-x-0 group-hover:scale-x-100 transition-transform duration-300 rounded-full"></span>
+                </>
+              )}
             </Link>
             <Link 
               href="/about" 
-              className="relative px-6 py-3 text-gray-300 hover:text-white font-medium transition-all duration-300 group"
+              className={`relative px-6 py-3 font-medium transition-all duration-300 group rounded-lg backdrop-blur-md border ${
+                pathname === '/about' 
+                  ? 'bg-yellow-400/20 border-yellow-400/40 text-yellow-400 shadow-lg shadow-yellow-400/20' 
+                  : 'bg-white/5 border-white/10 text-gray-300 hover:text-white hover:bg-white/10 hover:border-yellow-400/30 hover:shadow-lg hover:shadow-yellow-400/10'
+              }`}
             >
               <span className="relative z-10">About</span>
-              <span className="absolute inset-0 bg-gradient-to-r from-yellow-400/10 to-yellow-600/10 rounded-lg opacity-0 group-hover:opacity-100 transition-opacity duration-300"></span>
-              <span className="absolute bottom-0 left-0 right-0 h-0.5 bg-gradient-to-r from-yellow-400 to-yellow-600 scale-x-0 group-hover:scale-x-100 transition-transform duration-300"></span>
+              {pathname !== '/about' && (
+                <>
+                  <span className="absolute inset-0 bg-gradient-to-r from-yellow-400/20 to-yellow-600/20 rounded-lg opacity-0 group-hover:opacity-100 transition-opacity duration-300"></span>
+                  <span className="absolute bottom-0 left-0 right-0 h-0.5 bg-gradient-to-r from-yellow-400 to-yellow-600 scale-x-0 group-hover:scale-x-100 transition-transform duration-300 rounded-full"></span>
+                </>
+              )}
             </Link>
             <Link 
               href="/offers" 
-              className="relative px-6 py-3 text-gray-300 hover:text-white font-medium transition-all duration-300 group"
+              className={`relative px-6 py-3 font-medium transition-all duration-300 group rounded-lg backdrop-blur-md border ${
+                pathname === '/offers' 
+                  ? 'bg-yellow-400/20 border-yellow-400/40 text-yellow-400 shadow-lg shadow-yellow-400/20' 
+                  : 'bg-white/5 border-white/10 text-gray-300 hover:text-white hover:bg-white/10 hover:border-yellow-400/30 hover:shadow-lg hover:shadow-yellow-400/10'
+              }`}
             >
               <span className="relative z-10">Offers</span>
-              <span className="absolute inset-0 bg-gradient-to-r from-yellow-400/10 to-yellow-600/10 rounded-lg opacity-0 group-hover:opacity-100 transition-opacity duration-300"></span>
-              <span className="absolute bottom-0 left-0 right-0 h-0.5 bg-gradient-to-r from-yellow-400 to-yellow-600 scale-x-0 group-hover:scale-x-100 transition-transform duration-300"></span>
+              {pathname !== '/offers' && (
+                <>
+                  <span className="absolute inset-0 bg-gradient-to-r from-yellow-400/20 to-yellow-600/20 rounded-lg opacity-0 group-hover:opacity-100 transition-opacity duration-300"></span>
+                  <span className="absolute bottom-0 left-0 right-0 h-0.5 bg-gradient-to-r from-yellow-400 to-yellow-600 scale-x-0 group-hover:scale-x-100 transition-transform duration-300 rounded-full"></span>
+                </>
+              )}
             </Link>
             <Link 
               href="/other-books" 
-              className="relative px-6 py-3 text-gray-300 hover:text-white font-medium transition-all duration-300 group"
+              className={`relative px-6 py-3 font-medium transition-all duration-300 group rounded-lg backdrop-blur-md border ${
+                pathname?.startsWith('/other-books') 
+                  ? 'bg-yellow-400/20 border-yellow-400/40 text-yellow-400 shadow-lg shadow-yellow-400/20' 
+                  : 'bg-white/5 border-white/10 text-gray-300 hover:text-white hover:bg-white/10 hover:border-yellow-400/30 hover:shadow-lg hover:shadow-yellow-400/10'
+              }`}
             >
               <span className="relative z-10">Other Books</span>
-              <span className="absolute inset-0 bg-gradient-to-r from-yellow-400/10 to-yellow-600/10 rounded-lg opacity-0 group-hover:opacity-100 transition-opacity duration-300"></span>
-              <span className="absolute bottom-0 left-0 right-0 h-0.5 bg-gradient-to-r from-yellow-400 to-yellow-600 scale-x-0 group-hover:scale-x-100 transition-transform duration-300"></span>
+              {!pathname?.startsWith('/other-books') && (
+                <>
+                  <span className="absolute inset-0 bg-gradient-to-r from-yellow-400/20 to-yellow-600/20 rounded-lg opacity-0 group-hover:opacity-100 transition-opacity duration-300"></span>
+                  <span className="absolute bottom-0 left-0 right-0 h-0.5 bg-gradient-to-r from-yellow-400 to-yellow-600 scale-x-0 group-hover:scale-x-100 transition-transform duration-300 rounded-full"></span>
+                </>
+              )}
             </Link>
           </div>
         </div>

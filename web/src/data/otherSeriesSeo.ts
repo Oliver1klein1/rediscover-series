@@ -203,7 +203,7 @@ const fathersHeartBooksSEO: Record<string, OtherBookSEO> = {
         "availability": "https://schema.org/InStock",
         "url": "#",
         "priceCurrency": "USD",
-        "price": "14.99"
+        "price": "8.99"
       }
     }
   },
@@ -247,7 +247,7 @@ const fathersHeartBooksSEO: Record<string, OtherBookSEO> = {
         "availability": "https://schema.org/InStock",
         "url": "#",
         "priceCurrency": "USD",
-        "price": "14.99"
+        "price": "8.99"
       }
     }
   },
@@ -291,7 +291,7 @@ const fathersHeartBooksSEO: Record<string, OtherBookSEO> = {
         "availability": "https://schema.org/InStock",
         "url": "#",
         "priceCurrency": "USD",
-        "price": "14.99"
+        "price": "8.99"
       }
     }
   },
@@ -335,7 +335,7 @@ const fathersHeartBooksSEO: Record<string, OtherBookSEO> = {
         "availability": "https://schema.org/InStock",
         "url": "#",
         "priceCurrency": "USD",
-        "price": "14.99"
+        "price": "8.99"
       }
     }
   },
@@ -379,7 +379,7 @@ const fathersHeartBooksSEO: Record<string, OtherBookSEO> = {
         "availability": "https://schema.org/InStock",
         "url": "#",
         "priceCurrency": "USD",
-        "price": "14.99"
+        "price": "8.99"
       }
     }
   }
@@ -428,7 +428,7 @@ const unspokenDreamsBooksSEO: Record<string, OtherBookSEO> = {
         "availability": "https://schema.org/InStock",
         "url": "#",
         "priceCurrency": "USD",
-        "price": "13.99"
+        "price": "8.99"
       }
     }
   },
@@ -473,7 +473,7 @@ const unspokenDreamsBooksSEO: Record<string, OtherBookSEO> = {
         "availability": "https://schema.org/InStock",
         "url": "#",
         "priceCurrency": "USD",
-        "price": "13.99"
+        "price": "8.99"
       }
     }
   },
@@ -518,7 +518,7 @@ const unspokenDreamsBooksSEO: Record<string, OtherBookSEO> = {
         "availability": "https://schema.org/InStock",
         "url": "#",
         "priceCurrency": "USD",
-        "price": "13.99"
+        "price": "8.99"
       }
     }
   },
@@ -563,7 +563,7 @@ const unspokenDreamsBooksSEO: Record<string, OtherBookSEO> = {
         "availability": "https://schema.org/InStock",
         "url": "#",
         "priceCurrency": "USD",
-        "price": "13.99"
+        "price": "8.99"
       }
     }
   }

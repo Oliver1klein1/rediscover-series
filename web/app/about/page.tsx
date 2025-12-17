@@ -11,7 +11,15 @@ export default function AboutPage() {
           About the Author
         </h1>
         
-        <div className="flex justify-center mb-8">
+        <div className="flex justify-center items-center gap-4 mb-8">
+          <Image
+            src="/assets/ansilo-boff-avatar-v2.jpg"
+            alt="Ansilo Boff"
+            width={100}
+            height={100}
+            className="rounded-full opacity-90 hover:opacity-100 transition-opacity duration-300"
+            priority
+          />
           <Image
             src="/assets/ansilo_boff_logo.jpg?v=3"
             alt="Ansilo Boff Logo"
