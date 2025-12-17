@@ -116,135 +116,208 @@ export default function BookPage({ params }: PageProps) {
               )}
             </div>
             <div className="space-y-2 text-gray-400">
-              {book.pages && <p>Pages: {book.pages}</p>}
               {book.author && <p>Author: {book.author}</p>}
               {book.publisher && <p>Publisher: {book.publisher}</p>}
               {book.publicationDate && <p>Published: {book.publicationDate}</p>}
             </div>
-            {/* KDP Links Placeholder */}
-            <div className="mt-8 space-y-3">
-              <a
-                href="#"
-                className="block w-full bg-yellow-400 text-black text-center py-3 rounded-lg font-semibold hover:bg-yellow-500 transition"
-              >
-                Buy on Amazon
-              </a>
-              <a
-                href="#"
-                className="block w-full bg-gray-800 text-white text-center py-3 rounded-lg font-semibold hover:bg-gray-700 transition"
-              >
-                Get Ebook
-              </a>
-            </div>
+            {/* Purchase Links */}
+            {book.slug === 'liberating-humanity' ? (
+              <div className="mt-8 space-y-4">
+                <div>
+                  <a
+                    href="https://ansiloboff.gumroad.com/l/liberating-humanity"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="block w-full bg-yellow-400 text-black text-center py-3 rounded-lg font-semibold hover:bg-yellow-500 transition"
+                  >
+                    I want this!
+                  </a>
+                  <p className="text-center text-gray-400 text-sm mt-2">(Buy Direct from the Author)</p>
+                </div>
+                <div className="bg-gray-900 rounded-lg p-4 border border-gray-800">
+                  <p className="text-white font-medium mb-2">You will receive:</p>
+                  <ul className="text-gray-300 text-sm space-y-1 list-disc list-inside">
+                    <li>DRM-free PDF (Color)</li>
+                    <li>Printer-friendly Greyscale PDF</li>
+                    <li>EPUB for all e-readers</li>
+                    <li>Lifetime updates</li>
+                  </ul>
+                </div>
+                <div className="text-center pt-2">
+                  <a
+                    href="https://www.amazon.com/Liberating-Humanity-Rediscover-Subverted-Teachings-ebook/dp/B0G4KVLTTB/"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="text-gray-500 text-sm hover:text-gray-400 transition underline"
+                  >
+                    Prefer Amazon? View on Amazon
+                  </a>
+                </div>
+              </div>
+            ) : (
+              <div className="mt-8 space-y-3">
+                <a
+                  href="#"
+                  className="block w-full bg-yellow-400 text-black text-center py-3 rounded-lg font-semibold hover:bg-yellow-500 transition"
+                >
+                  Buy on Amazon
+                </a>
+                <a
+                  href="#"
+                  className="block w-full bg-gray-800 text-white text-center py-3 rounded-lg font-semibold hover:bg-gray-700 transition"
+                >
+                  Get Ebook
+                </a>
+              </div>
+            )}
           </div>
         </div>
 
-        {/* Chapters List */}
-        {chapters.length > 0 && (
+        {/* Sneak Peek / Chapters List */}
+        {book.slug === 'liberating-humanity' ? (
           <div className="bg-gray-900 rounded-lg p-8">
-            <h2 className="text-2xl font-bold text-white mb-6">Table of Contents</h2>
-            <div className="space-y-2">
-              {chapters.map((chapter, index) => {
-                // Determine chapter number/prefix
-                let prefix = '';
-                
-                // Check for anchor-based parts (e.g., content.xhtml#part-one, content.xhtml#part-two)
-                const anchorMatch = chapter.file.match(/#(part-one|part-two|part-?(\d+)|introduction|conclusion|contradiction-index)/i);
-                if (anchorMatch) {
-                  const anchor = anchorMatch[1].toLowerCase();
-                  if (anchor === 'part-one') prefix = 'Part 1';
-                  else if (anchor === 'part-two') prefix = 'Part 2';
-                  else if (anchor.startsWith('part')) {
-                    const num = anchorMatch[2] || (anchor === 'part-one' ? '1' : anchor === 'part-two' ? '2' : '');
-                    prefix = `Part ${num || '1'}`;
-                  } else if (anchor.includes('intro')) prefix = 'Introduction';
-                  else if (anchor.includes('conclusion')) prefix = 'Conclusion';
-                } else {
-                  // Fallback to filename pattern matching
-                  const fileMatch = chapter.file.match(/(chapter|introduction|intro|part|conclusion|appendix)(\d*)/i);
-                  if (fileMatch) {
-                    const type = fileMatch[1].toLowerCase();
-                    const num = fileMatch[2] || '';
-                    if (type.includes('intro')) prefix = 'Introduction';
-                    else if (type.includes('part')) prefix = `Part ${num || '1'}`;
-                    else if (type.includes('chapter')) prefix = `Chapter ${num || '1'}`;
-                    else if (type.includes('conclusion')) prefix = 'Conclusion';
-                    else if (type.includes('appendix')) prefix = `Appendix ${num || '1'}`;
-                  }
-                }
-                
-                // Clean up title - remove prefix if it's duplicated
-                let displayTitle = chapter.title;
-                let displayPrefix = prefix;
-                
-                if (displayTitle && prefix) {
-                  // Escape special regex characters in prefix
-                  const escapedPrefix = prefix.replace(/[.*+?^${}()|[\]\\]/g, '\\$&');
+            <h2 className="text-2xl font-bold text-white mb-6">Take a Sneek Peek inside ...</h2>
+            <div className="bg-gray-800 rounded-lg overflow-hidden border border-gray-700">
+              <iframe
+                src="/liberating_humanity_sneek_peek.pdf#toolbar=0&navpanes=0"
+                title="Liberating Humanity Sneak Peek"
+                className="w-full"
+                style={{ height: '900px' }}
+              />
+            </div>
+            <p className="text-sm text-gray-500 mt-3 text-center">Use the viewer controls to scroll and zoom.</p>
+          </div>
+        ) : null}
+
+        {/* Audiobook Section - Only for Liberating Humanity */}
+        {book.slug === 'liberating-humanity' && (
+          <div className="mt-12 bg-gray-900 rounded-lg p-8">
+            <h2 className="text-2xl font-bold text-white mb-4">Audiobook</h2>
+            <div className="bg-gray-800 rounded-lg p-6 text-center">
+              <p className="text-gray-400 mb-4">
+                Coming soon
+              </p>
+              <div className="flex justify-center">
+                <Image
+                  src="/audiobook_icon.png"
+                  alt="Audiobook icon"
+                  width={64}
+                  height={64}
+                  className="opacity-80 hover:opacity-100 transition-opacity"
+                />
+              </div>
+            </div>
+          </div>
+        )}
+
+        {/* Chapters List for other books */}
+        {book.slug !== 'liberating-humanity' && (
+          chapters.length > 0 && (
+            <div className="bg-gray-900 rounded-lg p-8">
+              <h2 className="text-2xl font-bold text-white mb-6">Table of Contents</h2>
+              <div className="space-y-2">
+                {chapters.map((chapter, index) => {
+                  // Determine chapter number/prefix
+                  let prefix = '';
                   
-                  // Check if title already starts with the prefix followed by colon (e.g., "Part 1: The Contradictions")
-                  const prefixWithColonRegex = new RegExp(`^${escapedPrefix}\\s*[:]\\s*`, 'i');
-                  if (prefixWithColonRegex.test(displayTitle)) {
-                    // Title already includes prefix with colon, so show full title without separate prefix
-                    displayPrefix = '';
-                    // Keep the full title as-is (don't remove prefix since it's part of the title)
-                    displayTitle = chapter.title;
+                  // Check for anchor-based parts (e.g., content.xhtml#part-one, content.xhtml#part-two)
+                  const anchorMatch = chapter.file.match(/#(part-one|part-two|part-?(\d+)|introduction|conclusion|contradiction-index)/i);
+                  if (anchorMatch) {
+                    const anchor = anchorMatch[1].toLowerCase();
+                    if (anchor === 'part-one') prefix = 'Part 1';
+                    else if (anchor === 'part-two') prefix = 'Part 2';
+                    else if (anchor.startsWith('part')) {
+                      const num = anchorMatch[2] || (anchor === 'part-one' ? '1' : anchor === 'part-two' ? '2' : '');
+                      prefix = `Part ${num || '1'}`;
+                    } else if (anchor.includes('intro')) prefix = 'Introduction';
+                    else if (anchor.includes('conclusion')) prefix = 'Conclusion';
                   } else {
-                    // Check if title starts with just the prefix (without colon)
-                    const prefixOnlyRegex = new RegExp(`^${escapedPrefix}\\s*$`, 'i');
-                    if (prefixOnlyRegex.test(displayTitle)) {
-                      // Title is just the prefix, so show only prefix
-                      displayTitle = '';
+                    // Fallback to filename pattern matching
+                    const fileMatch = chapter.file.match(/(chapter|introduction|intro|part|conclusion|appendix)(\d*)/i);
+                    if (fileMatch) {
+                      const type = fileMatch[1].toLowerCase();
+                      const num = fileMatch[2] || '';
+                      if (type.includes('intro')) prefix = 'Introduction';
+                      else if (type.includes('part')) prefix = `Part ${num || '1'}`;
+                      else if (type.includes('chapter')) prefix = `Chapter ${num || '1'}`;
+                      else if (type.includes('conclusion')) prefix = 'Conclusion';
+                      else if (type.includes('appendix')) prefix = `Appendix ${num || '1'}`;
+                    }
+                  }
+                  
+                  // Clean up title - remove prefix if it's duplicated
+                  let displayTitle = chapter.title;
+                  let displayPrefix = prefix;
+                  
+                  if (displayTitle && prefix) {
+                    // Escape special regex characters in prefix
+                    const escapedPrefix = prefix.replace(/[.*+?^${}()|[\]\\]/g, '\\$&');
+                    
+                    // Check if title already starts with the prefix followed by colon (e.g., "Part 1: The Contradictions")
+                    const prefixWithColonRegex = new RegExp(`^${escapedPrefix}\\s*[:]\\s*`, 'i');
+                    if (prefixWithColonRegex.test(displayTitle)) {
+                      // Title already includes prefix with colon, so show full title without separate prefix
+                      displayPrefix = '';
+                      // Keep the full title as-is (don't remove prefix since it's part of the title)
+                      displayTitle = chapter.title;
                     } else {
-                      // Remove prefix from title if it starts with it (without colon)
-                      const prefixRegexNoColon = new RegExp(`^${escapedPrefix}\\s*[-]?\\s*`, 'i');
-                      displayTitle = displayTitle.replace(prefixRegexNoColon, '').trim();
-                      
-                      // If title is empty after removal, use empty string
-                      if (!displayTitle) {
+                      // Check if title starts with just the prefix (without colon)
+                      const prefixOnlyRegex = new RegExp(`^${escapedPrefix}\\s*$`, 'i');
+                      if (prefixOnlyRegex.test(displayTitle)) {
+                        // Title is just the prefix, so show only prefix
                         displayTitle = '';
+                      } else {
+                        // Remove prefix from title if it starts with it (without colon)
+                        const prefixRegexNoColon = new RegExp(`^${escapedPrefix}\\s*[-]?\\s*`, 'i');
+                        displayTitle = displayTitle.replace(prefixRegexNoColon, '').trim();
+                        
+                        // If title is empty after removal, use empty string
+                        if (!displayTitle) {
+                          displayTitle = '';
+                        }
                       }
                     }
                   }
-                }
-                
-                // Check if this is a Part heading
-                const isPart = displayPrefix && displayPrefix.toLowerCase().startsWith('part');
-                
-                return (
-                  <div
-                    key={index}
-                    className={`p-4 bg-gray-800 rounded-lg hover:bg-gray-700 transition cursor-pointer ${isPart ? 'text-center' : 'flex items-start'}`}
-                  >
-                    {isPart ? (
-                      // Centered layout for Part headings
-                      <div className="space-y-1">
-                        <div className="text-gray-400 text-sm font-medium">
-                          {displayPrefix}
-                        </div>
-                        {displayTitle && (
-                          <div className="text-gray-200">
-                            {displayTitle}
-                          </div>
-                        )}
-                      </div>
-                    ) : (
-                      // Regular layout for other chapters
-                      <>
-                        {displayPrefix && (
-                          <span className="text-gray-400 text-sm font-medium min-w-[100px]">
+                  
+                  // Check if this is a Part heading
+                  const isPart = displayPrefix && displayPrefix.toLowerCase().startsWith('part');
+                  
+                  return (
+                    <div
+                      key={index}
+                      className={`p-4 bg-gray-800 rounded-lg hover:bg-gray-700 transition cursor-pointer ${isPart ? 'text-center' : 'flex items-start'}`}
+                    >
+                      {isPart ? (
+                        // Centered layout for Part headings
+                        <div className="space-y-1">
+                          <div className="text-gray-400 text-sm font-medium">
                             {displayPrefix}
+                          </div>
+                          {displayTitle && (
+                            <div className="text-gray-200">
+                              {displayTitle}
+                            </div>
+                          )}
+                        </div>
+                      ) : (
+                        // Regular layout for other chapters
+                        <>
+                          {displayPrefix && (
+                            <span className="text-gray-400 text-sm font-medium min-w-[100px]">
+                              {displayPrefix}
+                            </span>
+                          )}
+                          <span className={`text-gray-200 ${displayPrefix ? 'flex-1' : ''}`}>
+                            {displayTitle || displayPrefix || ''}
                           </span>
-                        )}
-                        <span className={`text-gray-200 ${displayPrefix ? 'flex-1' : ''}`}>
-                          {displayTitle || displayPrefix || ''}
-                        </span>
-                      </>
-                    )}
-                  </div>
-                );
-              })}
+                        </>
+                      )}
+                    </div>
+                  );
+                })}
+              </div>
             </div>
-          </div>
+          )
         )}
 
         {/* Go Deeper (A+ Content) */}
@@ -436,19 +509,25 @@ export default function BookPage({ params }: PageProps) {
             </div>
           </div>
         ) : (
-          <div className="mt-12 bg-gray-900 rounded-lg p-8">
-            <h2 className="text-2xl font-bold text-white mb-4">Audio Sample</h2>
-            <div className="bg-gray-800 rounded-lg p-6 text-center">
-              <p className="text-gray-400 mb-4">
-                {book.id === 'book1' ? 'Audiobook available' : 'Audio sample coming soon'}
-              </p>
-              {book.id === 'book1' && (
-                <button className="bg-yellow-400 text-black px-6 py-2 rounded-lg font-semibold hover:bg-yellow-500 transition">
-                  Listen Now
-                </button>
-              )}
+          book.slug !== 'liberating-humanity' && (
+            <div className="mt-12 bg-gray-900 rounded-lg p-8">
+              <h2 className="text-2xl font-bold text-white mb-4">Audiobook</h2>
+              <div className="bg-gray-800 rounded-lg p-6 text-center">
+                <p className="text-gray-400 mb-4">
+                  Coming soon
+                </p>
+                <div className="flex justify-center">
+                  <Image
+                    src="/audiobook_icon.png"
+                    alt="Audiobook icon"
+                    width={64}
+                    height={64}
+                    className="opacity-80 hover:opacity-100 transition-opacity"
+                  />
+                </div>
+              </div>
             </div>
-          </div>
+          )
         )}
       </div>
     </div>

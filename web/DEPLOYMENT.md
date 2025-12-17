@@ -86,3 +86,4 @@ Once connected:
 - Every push to your main/master branch will auto-deploy
 - Preview deployments are created for pull requests
 - All deployments are available in Vercel dashboard
+
