@@ -61,9 +61,12 @@ export default function Home() {
                   />
                 </div>
                 <div className="text-center">
-                  <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold text-white mb-6 leading-normal tracking-tight">
-                    <span className="block">Rediscovering Jesus'</span>
-                    <span className="block text-yellow-400 mt-2">Subverted Teachings</span>
+                  <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold mb-6 leading-normal tracking-tight">
+                    <span className="block text-yellow-400">Rediscovering Jesus'</span>
+                    <span className="block mt-2">
+                      <span className="text-white">Subverted</span>{' '}
+                      <span className="text-yellow-400">Teachings</span>
+                    </span>
                   </h1>
                   <p className="text-xl md:text-2xl lg:text-3xl text-gray-300 mb-2 font-medium italic mt-6">
                     and the Father's Love

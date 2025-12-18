@@ -198,13 +198,28 @@ export default function BookPage({ params }: PageProps) {
                 Prefer to listen?
               </p>
               <p className="text-gray-300 mb-4">
-                <strong><em>Liberating Humanity</em></strong> is now available as a complete, unabridged audiobook, delivered as a single, chapterized M4B file for smooth listening on Apple Books and other audiobook players.
+                <strong><em>Liberating Humanity</em></strong> is now available as a <strong>complete, unabridged audiobook</strong>, delivered as a <strong>single, chapterized M4B file</strong> for seamless listening on <strong>Apple Books and most audiobook players</strong>.
               </p>
               <p className="text-gray-300 mb-4">
                 Narrated by <em>Truth Beyond Tradition Voice</em>, this edition preserves the book's intensity, clarity, and confrontational honesty … ideal for reflective listening or deep re-examination of long-held beliefs.
               </p>
+              <div className="mb-6">
+                <p className="text-gray-300 mb-3">
+                  Listen to a short sample from Chapter 7, where Paul's teachings come under the microscope:
+                </p>
+                <div className="flex items-center justify-center gap-4 bg-gray-700 rounded-lg p-4">
+                  <audio
+                    controls
+                    className="w-full max-w-md"
+                    style={{ outline: 'none' }}
+                  >
+                    <source src="/sample_audio_paul.mp3" type="audio/mpeg" />
+                    Your browser does not support the audio element.
+                  </audio>
+                </div>
+              </div>
               <p className="text-gray-300 mb-6">
-                Instant download. DRM-free. <strong>Yours to keep.</strong>
+                Get the full audiobook. Instant download. DRM-free. <strong>Yours to keep.</strong>
               </p>
               <div className="flex justify-center mb-4">
                 <Image
