@@ -21,6 +21,8 @@ export interface BookMetadata {
   coverImage: string;
   slug: string;
   order: number;
+  amazon?: string;
+  gumroad?: string;
   price?: {
     paperback: number;
   };
@@ -62,6 +64,7 @@ A tender, hope-filled story that helps children let go of anger, make peace quic
       coverImage: '/assets/other-series/fathers-heart/fh-book1-cover.jpg',
       slug: 'when-my-little-brother-broke-my-toy',
       order: 1,
+      amazon: 'https://www.amazon.com/dp/B0G7X5RWSR',
       price: {
         paperback: 8.99,
       },
@@ -78,6 +81,7 @@ A heartfelt reminder for every child that mercy always brings the sunshine back.
       coverImage: '/assets/other-series/fathers-heart/fh-book2-cover.jpg',
       slug: 'when-i-decided-i-wont-be-friends-with-oliver-anymore',
       order: 2,
+      amazon: 'https://www.amazon.com/dp/B0G7T5CSCX',
       price: {
         paperback: 8.99,
       },
@@ -94,6 +98,7 @@ A joyful story that helps kids speak kindly, choose bright "heart-colors," and s
       coverImage: '/assets/other-series/fathers-heart/fh-book3-cover.jpg',
       slug: 'why-saying-bad-words-makes-everyone-sad',
       order: 3,
+      amazon: 'https://www.amazon.com/dp/B0G7SNXG4M',
       price: {
         paperback: 8.99,
       },
@@ -110,6 +115,7 @@ This comforting story helps children trade fear for trust and discover that true
       coverImage: '/assets/other-series/fathers-heart/fh-book4-cover.jpg',
       slug: 'when-thunder-made-me-hide',
       order: 4,
+      amazon: 'https://www.amazon.com/dp/B0G7SRMMJP',
       price: {
         paperback: 8.99,
       },
@@ -126,6 +132,7 @@ A beautiful story of generosity, belonging, and the kind of welcome that feels l
       coverImage: '/assets/other-series/fathers-heart/fh-book5-cover.jpg',
       slug: 'when-we-made-room-at-our-table',
       order: 5,
+      amazon: 'https://www.amazon.com/dp/B0G7W7GJPS',
       price: {
         paperback: 8.99,
       },
@@ -166,6 +173,7 @@ A perfect baby shower or bedtime gift … a keepsake to treasure forever.`,
       coverImage: '/assets/other-series/unspoken-dreams/b1-mum-son2.jpg',
       slug: 'whispers-to-my-unborn-son-mum',
       order: 1,
+      amazon: 'https://www.amazon.com/dp/B0G7WK1SW9',
       price: {
         paperback: 8.99,
       },
@@ -183,6 +191,7 @@ An unforgettable keepsake for new or expecting fathers … promising wisdom that
       coverImage: '/assets/other-series/unspoken-dreams/b2-dad-son-cover.jpg',
       slug: 'whispers-to-my-unborn-son-dad',
       order: 2,
+      amazon: 'https://www.amazon.com/dp/B0G7WG9LRG',
       price: {
         paperback: 8.99,
       },
@@ -200,6 +209,7 @@ A heartwarming gift for dads welcoming daughters … the beginning of a bond tha
       coverImage: '/assets/other-series/unspoken-dreams/b3_dad_daughter_cover.jpg',
       slug: 'whispers-to-my-unborn-daughter-dad',
       order: 3,
+      amazon: 'https://www.amazon.com/dp/B0G7WN462K',
       price: {
         paperback: 8.99,
       },
@@ -217,6 +227,7 @@ A gift every mum-to-be will cherish … a promise of love wrapped in poetry.`,
       coverImage: '/assets/other-series/unspoken-dreams/b4-mum-daughter.jpg',
       slug: 'whispers-to-my-unborn-daughter-mum',
       order: 4,
+      amazon: 'https://www.amazon.com/dp/B0G7WG9LRG',
       price: {
         paperback: 8.99,
       },

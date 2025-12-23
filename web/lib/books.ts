@@ -31,69 +31,106 @@ const bookMapping: Record<string, { dir: string; slug: string }> = {
 };
 
 export function getAllBooks(): BookMetadata[] {
-  const booksDir = path.join(process.cwd(), '..', 'books');
-  const books: BookMetadata[] = [];
+  try {
+    const booksDir = path.join(process.cwd(), '..', 'books');
+    const books: BookMetadata[] = [];
 
-  for (let i = 1; i <= 5; i++) {
-    const bookId = `book${i}`;
-    const bookJsonPath = path.join(booksDir, `${bookId}.json`);
-    
-    if (fs.existsSync(bookJsonPath)) {
-      const bookData = JSON.parse(fs.readFileSync(bookJsonPath, 'utf-8'));
-      const mapping = bookMapping[bookId];
+    for (let i = 1; i <= 5; i++) {
+      const bookId = `book${i}`;
+      const bookJsonPath = path.join(booksDir, `${bookId}.json`);
       
-      // Try to get enhanced metadata from submodule
-      const submoduleDir = path.join(booksDir, mapping.dir);
-      let enhancedMetadata: any = {};
-      
-      if (fs.existsSync(submoduleDir)) {
-        const metadataPath = path.join(submoduleDir, 'book_metadata.json');
-        if (fs.existsSync(metadataPath)) {
-          try {
-            enhancedMetadata = JSON.parse(fs.readFileSync(metadataPath, 'utf-8'));
-          } catch (e) {
-            // Ignore if metadata file is malformed
+      if (fs.existsSync(bookJsonPath)) {
+        try {
+          const bookData = JSON.parse(fs.readFileSync(bookJsonPath, 'utf-8'));
+          const mapping = bookMapping[bookId];
+          
+          // Try to get enhanced metadata from submodule
+          const submoduleDir = path.join(booksDir, mapping.dir);
+          let enhancedMetadata: any = {};
+          
+          if (fs.existsSync(submoduleDir)) {
+            const metadataPath = path.join(submoduleDir, 'book_metadata.json');
+            if (fs.existsSync(metadataPath)) {
+              try {
+                enhancedMetadata = JSON.parse(fs.readFileSync(metadataPath, 'utf-8'));
+              } catch (e) {
+                // Ignore if metadata file is malformed
+              }
+            }
           }
-        }
-      }
 
-      // Use cover image from assets folder
-      const coverImage = bookData.coverImage || enhancedMetadata.coverImage || '';
-      
-      // Normalize tags to always be an array
-      let tags: string[] = [];
-      if (bookData.tags && Array.isArray(bookData.tags)) {
-        tags = bookData.tags;
-      } else if (enhancedMetadata.tags) {
-        if (Array.isArray(enhancedMetadata.tags)) {
-          tags = enhancedMetadata.tags;
-        } else if (typeof enhancedMetadata.tags === 'string') {
-          tags = enhancedMetadata.tags.split(',').map((t: string) => t.trim()).filter((t: string) => t.length > 0);
+          // Use cover image from assets folder
+          const coverImage = bookData.coverImage || enhancedMetadata.coverImage || '';
+          
+          // Normalize tags to always be an array
+          let tags: string[] = [];
+          if (bookData.tags && Array.isArray(bookData.tags)) {
+            tags = bookData.tags;
+          } else if (enhancedMetadata.tags) {
+            if (Array.isArray(enhancedMetadata.tags)) {
+              tags = enhancedMetadata.tags;
+            } else if (typeof enhancedMetadata.tags === 'string') {
+              tags = enhancedMetadata.tags.split(',').map((t: string) => t.trim()).filter((t: string) => t.length > 0);
+            }
+          } else if (bookData.tags && typeof bookData.tags === 'string') {
+            tags = bookData.tags.split(',').map((t: string) => t.trim()).filter((t: string) => t.length > 0);
+          }
+          
+          // Merge metadata, but prioritize bookData description over enhancedMetadata
+          books.push({
+            ...enhancedMetadata,
+            ...bookData, // bookData takes priority, especially for description
+            id: bookId,
+            slug: mapping.slug,
+            coverImage: coverImage.startsWith('assets/') ? coverImage : `assets/${coverImage}`,
+            pages: bookData.pages || enhancedMetadata.pages || 0,
+            tags,
+            description: bookData.description || enhancedMetadata.description || '', // Always use bookData description
+          });
+        } catch (e) {
+          // Skip this book if JSON parsing fails
+          console.error(`Error parsing book ${bookId}:`, e);
         }
-      } else if (bookData.tags && typeof bookData.tags === 'string') {
-        tags = bookData.tags.split(',').map((t: string) => t.trim()).filter((t: string) => t.length > 0);
       }
-      
-      // Merge metadata, but prioritize bookData description over enhancedMetadata
-      books.push({
-        ...enhancedMetadata,
-        ...bookData, // bookData takes priority, especially for description
-        id: bookId,
-        slug: mapping.slug,
-        coverImage: coverImage.startsWith('assets/') ? coverImage : `assets/${coverImage}`,
-        pages: bookData.pages || enhancedMetadata.pages || 0,
-        tags,
-        description: bookData.description || enhancedMetadata.description || '', // Always use bookData description
-      });
     }
-  }
 
-  return books;
+    return books;
+  } catch (error) {
+    console.error('Error loading books:', error);
+    return [];
+  }
 }
 
 export function getBookBySlug(slug: string): BookMetadata | null {
   const books = getAllBooks();
   return books.find(book => book.slug === slug) || null;
+}
+
+export function getBookCoverImage(slug: string): string | null {
+  try {
+    // Handle jesus-god slug mapping to framing-jesus
+    const normalizedSlug = slug === 'jesus-god' ? 'framing-jesus' : slug;
+    const book = getBookBySlug(normalizedSlug);
+    if (book && book.coverImage) {
+      // Ensure path starts with / for web access
+      return book.coverImage.startsWith('/') ? book.coverImage : `/${book.coverImage}`;
+    }
+  } catch (error) {
+    console.error(`Error getting cover image for ${slug}:`, error);
+  }
+  return null;
+}
+
+export function getBookTitle(slug: string): string | null {
+  try {
+    // Handle jesus-god slug mapping to framing-jesus
+    const normalizedSlug = slug === 'jesus-god' ? 'framing-jesus' : slug;
+    const book = getBookBySlug(normalizedSlug);
+    return book ? book.title : null;
+  } catch (error) {
+    console.error(`Error getting title for ${slug}:`, error);
+    return null;
+  }
 }
 
 function extractTitleFromFile(filePath: string, bookDir?: string): string {

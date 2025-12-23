@@ -109,21 +109,24 @@ export default function BookPage({ params }: PageProps) {
                     </div>
                     <div className="text-right">
                       <p className="text-3xl font-bold text-yellow-400">${book.price.paperback.toFixed(2)}</p>
-                      <div className="flex gap-2 mt-2">
-                        <a
-                          href="#"
-                          className="px-4 py-2 bg-yellow-400 text-black rounded font-semibold hover:bg-yellow-500 transition text-sm"
-                          title="Amazon link will be added when available"
-                        >
-                          Amazon
-                        </a>
-                        <a
-                          href="#"
-                          className="px-4 py-2 bg-purple-600 text-white rounded font-semibold hover:bg-purple-700 transition text-sm"
-                          title="Gumroad link will be added when available"
-                        >
-                          Gumroad
-                        </a>
+                      <div className="mt-2">
+                        {book.amazon ? (
+                          <a
+                            href={book.amazon}
+                            target="_blank"
+                            rel="noopener noreferrer"
+                            className="inline-block px-6 py-2 bg-yellow-400 text-black rounded font-semibold hover:bg-yellow-500 transition text-sm"
+                          >
+                            Buy on Amazon
+                          </a>
+                        ) : (
+                          <span
+                            className="inline-block px-6 py-2 bg-gray-700 text-gray-400 rounded font-semibold text-sm cursor-not-allowed"
+                            title="Amazon link coming soon"
+                          >
+                            Buy on Amazon
+                          </span>
+                        )}
                       </div>
                     </div>
                   </div>

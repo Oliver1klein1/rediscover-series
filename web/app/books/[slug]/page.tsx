@@ -3,7 +3,9 @@ import Image from 'next/image';
 import { notFound } from 'next/navigation';
 import { aplusContent } from '@/src/data/aplus';
 import { getSEOForBook } from '@/src/data/seo';
+import { getBundlesForBook } from '@/lib/bundles';
 import JsonLd from '@/components/JsonLd';
+import BundleCard from '@/components/BundleCard';
 import type { Metadata } from 'next';
 
 interface PageProps {
@@ -50,6 +52,45 @@ export default function BookPage({ params }: PageProps) {
   const book = getBookBySlug(params.slug);
   const chapters = getBookChapters(params.slug);
   const seoData = getSEOForBook(params.slug);
+  const bundlesForBook = getBundlesForBook(params.slug);
+
+  const purchaseOptions: Record<
+    string,
+    {
+      gumroad: string;
+      amazon?: string;
+    }
+  > = {
+    'liberating-humanity': {
+      gumroad: 'https://ansiloboff.gumroad.com/l/liberating-humanity',
+      amazon:
+        'https://www.amazon.com/Liberating-Humanity-Rediscover-Subverted-Teachings-ebook/dp/B0G4KVLTTB/',
+    },
+    'escape-the-hell-myth': {
+      gumroad: 'https://ansiloboff.gumroad.com/l/escape-hell',
+      amazon: 'https://www.amazon.com/dp/B0G4SVQGJB',
+    },
+    'bible-contradictions': {
+      gumroad: 'https://ansiloboff.gumroad.com/l/101-illustrated-bible-contradictions',
+      amazon: 'https://www.amazon.com/dp/B0G5FV99Y2',
+    },
+    'framing-jesus': {
+      gumroad: 'https://ansiloboff.gumroad.com/l/framing-jesus',
+      amazon: 'https://www.amazon.com/dp/B0G6PGS6BN',
+    },
+    'reality-unveiled': {
+      gumroad: 'https://ansiloboff.gumroad.com/l/reality-unveiled',
+      amazon: 'https://www.amazon.com/dp/B0G63857ZF',
+    },
+  };
+
+  const samplePreviews: Record<string, string> = {
+    'liberating-humanity': '/liberating_humanity_sneek_peek.pdf#toolbar=0&navpanes=0',
+    'escape-the-hell-myth': '/samples/escape-hell_sample.pdf#toolbar=0&navpanes=0',
+    'bible-contradictions': '/samples/101-bible-contradictions_sample.pdf#toolbar=0&navpanes=0',
+    'framing-jesus': '/samples/framing-jesus_sample.pdf#toolbar=0&navpanes=0',
+    'reality-unveiled': '/samples/reality-unveiled_sample.pdf#toolbar=0&navpanes=0',
+  };
 
   if (!book) {
     notFound();
@@ -121,11 +162,11 @@ export default function BookPage({ params }: PageProps) {
               {book.publicationDate && <p>Published: {book.publicationDate}</p>}
             </div>
             {/* Purchase Links */}
-            {book.slug === 'liberating-humanity' ? (
+            {purchaseOptions[book.slug] ? (
               <div className="mt-8 space-y-4">
                 <div>
                   <a
-                    href="https://ansiloboff.gumroad.com/l/liberating-humanity"
+                    href={purchaseOptions[book.slug].gumroad}
                     target="_blank"
                     rel="noopener noreferrer"
                     className="block w-full bg-yellow-400 text-black text-center py-3 rounded-lg font-semibold hover:bg-yellow-500 transition"
@@ -143,16 +184,18 @@ export default function BookPage({ params }: PageProps) {
                     <li>Lifetime updates</li>
                   </ul>
                 </div>
-                <div className="text-center pt-2">
-                  <a
-                    href="https://www.amazon.com/Liberating-Humanity-Rediscover-Subverted-Teachings-ebook/dp/B0G4KVLTTB/"
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className="text-gray-500 text-sm hover:text-gray-400 transition underline"
-                  >
-                    Prefer Amazon? View on Amazon
-                  </a>
-                </div>
+                {purchaseOptions[book.slug].amazon && (
+                  <div className="text-center pt-2">
+                    <a
+                      href={purchaseOptions[book.slug].amazon}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="text-gray-500 text-sm hover:text-gray-400 transition underline"
+                    >
+                      Prefer Amazon? View on Amazon
+                    </a>
+                  </div>
+                )}
               </div>
             ) : (
               <div className="mt-8 space-y-3">
@@ -173,21 +216,38 @@ export default function BookPage({ params }: PageProps) {
           </div>
         </div>
 
+        {/* Prefer a Bundle? Block */}
+        {bundlesForBook.length > 0 && (
+          <div className="mt-8 bg-gray-900 rounded-lg p-6 border border-gray-800">
+            <h3 className="text-xl font-bold text-white mb-2">
+              Prefer a bundle?
+            </h3>
+            <p className="text-gray-300 text-sm mb-4">
+              Save time by starting with a curated collection.
+            </p>
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
+              {bundlesForBook.map((bundle) => (
+                <BundleCard key={bundle.slug} bundle={bundle} />
+              ))}
+            </div>
+          </div>
+        )}
+
         {/* Sneak Peek / Chapters List */}
-        {book.slug === 'liberating-humanity' ? (
+        {samplePreviews[book.slug] && (
           <div className="bg-gray-900 rounded-lg p-8">
-            <h2 className="text-2xl font-bold text-white mb-6">Take a Sneek Peek inside ...</h2>
+            <h2 className="text-2xl font-bold text-white mb-6">Take a Sneak Peek inside ...</h2>
             <div className="bg-gray-800 rounded-lg overflow-hidden border border-gray-700">
               <iframe
-                src="/liberating_humanity_sneek_peek.pdf#toolbar=0&navpanes=0"
-                title="Liberating Humanity Sneak Peek"
+                src={samplePreviews[book.slug]}
+                title={`${book.title} Sneak Peek`}
                 className="w-full"
                 style={{ height: '900px' }}
               />
             </div>
             <p className="text-sm text-gray-500 mt-3 text-center">Use the viewer controls to scroll and zoom.</p>
           </div>
-        ) : null}
+        )}
 
         {/* Audiobook Section - Only for Liberating Humanity */}
         {book.slug === 'liberating-humanity' && (
@@ -441,127 +501,24 @@ export default function BookPage({ params }: PageProps) {
         )}
 
         {/* Audio Sample or Sneak Peek */}
-        {book.slug === 'bible-contradictions' ? (
+        {book.slug !== 'liberating-humanity' && book.slug !== 'bible-contradictions' && (
           <div className="mt-12 bg-gray-900 rounded-lg p-8">
-            <h2 className="text-2xl font-bold text-white mb-6">A Sneak Peek...</h2>
-            <p className="text-gray-300 text-lg mb-6">Here are 4 contradictions to whet your appetite:</p>
-            
-            <div className="space-y-12">
-              {/* Contradiction 2 */}
-              <div className="bg-gray-800 rounded-lg p-6">
-                <h3 className="text-xl font-bold text-white mb-4">Contradiction Number 2: King Jehoiachin's Age</h3>
-                <div className="w-full max-w-[60%] mx-auto mb-6">
-                  <img
-                    src="/books/bible-contradictions/c002-jehoiachin-age.jpg"
-                    alt="King Jehoiachin's Age Contradiction Image"
-                    className="rounded-lg shadow-lg w-full h-auto"
-                  />
-                </div>
-                <p className="text-gray-300 leading-relaxed">
-                  According to 2 Chronicles 36:9, he was <strong>8 years old</strong>. But in 2 Kings 24:8, it says he was <strong>18 years old</strong>. That's a <em>huge difference</em>. Ten years is no small error when you're talking about whether a child or a young adult was ruling a kingdom. This contradiction has minor theological significance but raises real concerns for people who view Scripture as inerrant down to every word and number. Critics argue that this discrepancy reveals how historical books may have been copied or edited over time with occasional numerical mistakes. Defenders of the Bible often try to "explain it away" by suggesting the Chronicler's version (8 years old) is a copyist's error. The Hebrew characters for 8 (שׁמֹנֶה) and 18 (שְׁמֹנֶה־עֶשְׂרֵה) are very similar and may have been misread by a scribe. Others argue that Jehoiachin may have been made co-regent at 8 and became full king at 18, although there's no strong textual support for that theory. Either way, it paints a picture of fragile bible texts where seemingly simple details don't align.
-                </p>
-              </div>
-
-              {/* Contradiction 3 */}
-              <div className="bg-gray-800 rounded-lg p-6">
-                <h3 className="text-xl font-bold text-white mb-4">Contradiction Number 3: Jesus' Lineage</h3>
-                <div className="w-full max-w-[60%] mx-auto mb-6">
-                  <img
-                    src="/books/bible-contradictions/c003-jesus-david-lineage.jpg"
-                    alt="Jesus' Lineage Contradiction Image"
-                    className="rounded-lg shadow-lg w-full h-auto"
-                  />
-                </div>
-                <p className="text-gray-300 leading-relaxed">
-                  This contradiction appears in the genealogies of Jesus found in the Gospels of Matthew and Luke. <strong>Amazingly, most churchgoers are unaware this one even exists!</strong> Matthew 1:6 traces Jesus' lineage through Solomon, the royal son of David, which fits a narrative of kingship. But Luke 3:31 traces it instead through Nathan, another son of David who never ruled as king. Both can't be biologically correct if taken literally. So which is it? Theologically, this matters because Messianic prophecy was thought to require descent from David, often interpreted to mean through the royal line. Some try to reconcile the two by saying Matthew gives Joseph's LEGAL line, while Luke gives Mary's biological line (with Heli as Mary's father and Joseph's father-in-law), despite the lack of evidence for this. Others propose the genealogies are symbolic, not historical. But there's no indication in either gospel that the genealogy is metaphorical. Both present them as straightforward history. So, unless one adopts a fancy workaround, this is a sticky one. Unfortunately, it gets worse in the next contradiction.
-                </p>
-              </div>
-
-              {/* Contradiction 4 */}
-              <div className="bg-gray-800 rounded-lg p-6">
-                <h3 className="text-xl font-bold text-white mb-4">Contradiction Number 4: Royal Disqualification</h3>
-                <div className="w-full max-w-[60%] mx-auto mb-6">
-                  <img
-                    src="/books/bible-contradictions/c004-royal-disqualification.jpg"
-                    alt="Royal Disqualification Contradiction Image"
-                    className="rounded-lg shadow-lg w-full h-auto"
-                  />
-                </div>
-                <div className="text-gray-300 leading-relaxed space-y-4">
-                  <p>
-                    <strong>The issue of Jesus' royal line deepens into another thorny issue:</strong> Can Jesus inherit David's throne if one of his ancestors was cursed by Yahweh to never have a descendant sit on it?
-                  </p>
-                  <p>
-                    In Luke 1:32, the angel Gabriel declares that Jesus will be given <strong>"the throne of his father David"</strong>, fulfilling a major Messianic prophecy.
-                  </p>
-                  <p>
-                    But there's a snag.
-                  </p>
-                  <p>
-                    According to Matthew 1:11 and 1 Chronicles 3:16, Jesus is descended (through Joseph's line) from <strong>Jehoiakim</strong>, a king whom Yahweh curses in Jeremiah 36:30, saying that <strong>none of his descendants will sit on David's throne</strong>.
-                  </p>
-                  <p>
-                    <strong>That seems to be a direct block to Jesus' claim</strong>. If he's biologically tied to Jehoiakim, the curse would disqualify him from the throne.
-                  </p>
-                  <p>
-                    Some apologists try to resolve this by saying Jesus wasn't Joseph's biological son (thus avoiding the curse … Mary was conceived by the Holy Spirit, remember?), or that Luke's genealogy represents Mary's line, which bypasses Jehoiakim entirely.
-                  </p>
-                  <p>
-                    <em>But both solutions are speculative and not explicitly stated in the text.</em>
-                  </p>
-                  <p>
-                    Also, both lines pass through Joseph anyway, so the legal argument remains <strong>thin at best</strong>.
-                  </p>
-                  <p>
-                    If we take the genealogies and prophecies at face value, <strong>this becomes a genuine theological headache</strong>.
-                  </p>
-                  <p>
-                    <strong>Incidentally, the same curse was pronounced on Jehoiakim's son, Jehoiachin (also known as Jeconiah or Coniah) in Jeremiah 22:30.</strong> <em>So a double-curse if you like.</em>
-                  </p>
-                </div>
-              </div>
-
-              {/* Contradiction 5 */}
-              <div className="bg-gray-800 rounded-lg p-6">
-                <h3 className="text-xl font-bold text-white mb-4">Contradiction Number 5: Joseph's Father</h3>
-                <div className="w-full max-w-[60%] mx-auto mb-6">
-                  <img
-                    src="/books/bible-contradictions/c005-father-of-joseph.jpg"
-                    alt="Joseph's Father Contradiction Image"
-                    className="rounded-lg shadow-lg w-full h-auto"
-                  />
-                </div>
-                <div className="text-gray-300 leading-relaxed space-y-4">
-                  <p>
-                    This previous contradiction flows into the next one, which was already implied (and even stated): <strong>Who was Joseph's father?</strong> According to Matthew 1:16, it was <strong>Jacob</strong>, but Luke 3:23 says it was <strong>Heli</strong>. Obviously, Joseph couldn't have had two biological fathers, so something doesn't add up. This matters more than it first seems because these genealogies are often used to validate Jesus' <em>Messianic credentials</em>—tracing him legally or biologically back to King David.
-                  </p>
-                  <p>
-                    To explain the discrepancy, some propose that Matthew traces the legal line (as stated previously perhaps via adoption or inheritance laws), while Luke gives the biological line, possibly through Mary (making Heli her father, and Joseph his son-in-law). But the text in Luke doesn't say anything about Mary—it <em>clearly says Joseph was the son of Heli</em>. Others suggest that one genealogy uses levirate marriage logic, where a man legally becomes the child of his mother's second husband if the first died without issue. These workarounds exist—but they rely on <strong>speculation rather than textual clarity</strong>. For readers who expect clean historical records, this starts to get awkward.
-                  </p>
-                </div>
+            <h2 className="text-2xl font-bold text-white mb-4">Audiobook</h2>
+            <div className="bg-gray-800 rounded-lg p-6 text-center">
+              <p className="text-gray-400 mb-4">
+                Coming soon
+              </p>
+              <div className="flex justify-center">
+                <Image
+                  src="/audiobook_icon.png"
+                  alt="Audiobook icon"
+                  width={64}
+                  height={64}
+                  className="opacity-80 hover:opacity-100 transition-opacity"
+                />
               </div>
             </div>
           </div>
-        ) : (
-          book.slug !== 'liberating-humanity' && (
-            <div className="mt-12 bg-gray-900 rounded-lg p-8">
-              <h2 className="text-2xl font-bold text-white mb-4">Audiobook</h2>
-              <div className="bg-gray-800 rounded-lg p-6 text-center">
-                <p className="text-gray-400 mb-4">
-                  Coming soon
-                </p>
-                <div className="flex justify-center">
-                  <Image
-                    src="/audiobook_icon.png"
-                    alt="Audiobook icon"
-                    width={64}
-                    height={64}
-                    className="opacity-80 hover:opacity-100 transition-opacity"
-                  />
-                </div>
-              </div>
-            </div>
-          )
         )}
       </div>
     </div>

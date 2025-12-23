@@ -2,11 +2,31 @@ import Image from 'next/image';
 import Link from 'next/link';
 import { getAllBooks } from '@/lib/books';
 import { getAllOtherSeries } from '@/lib/otherSeries';
+import { getFeaturedBundles } from '@/lib/bundles';
 import { getSeriesSEO } from '@/src/data/seo';
 import JsonLd from '@/components/JsonLd';
+import BundlesSection from '@/components/BundlesSection';
 import type { Metadata } from 'next';
 
-const seoData = getSeriesSEO();
+let seoData: ReturnType<typeof getSeriesSEO>;
+try {
+  seoData = getSeriesSEO();
+} catch (error) {
+  console.error('Error loading SEO data:', error);
+  // Fallback SEO data
+  seoData = {
+    metaTitle: 'Rediscover Series',
+    metaDescription: 'Rediscovering Jesus\' Subverted Teachings and the Father\'s Love',
+    keywords: [],
+    slug: '/',
+    canonicalUrl: 'https://www.ansiloboff.com',
+    ogTitle: 'Rediscover Series',
+    ogDescription: 'Rediscovering Jesus\' Subverted Teachings and the Father\'s Love',
+    twitterTitle: 'Rediscover Series',
+    twitterDescription: 'Rediscovering Jesus\' Subverted Teachings and the Father\'s Love',
+    schema: {},
+  };
+}
 
 export const metadata: Metadata = {
   title: seoData.metaTitle,
@@ -29,8 +49,30 @@ export const metadata: Metadata = {
 };
 
 export default function Home() {
-  const books = getAllBooks();
-  const otherSeries = getAllOtherSeries();
+  let books: ReturnType<typeof getAllBooks> = [];
+  let otherSeries: ReturnType<typeof getAllOtherSeries> = [];
+  let featuredBundles: ReturnType<typeof getFeaturedBundles> = [];
+  
+  try {
+    books = getAllBooks();
+  } catch (error) {
+    console.error('Error loading books:', error);
+    books = [];
+  }
+  
+  try {
+    otherSeries = getAllOtherSeries();
+  } catch (error) {
+    console.error('Error loading other series:', error);
+    otherSeries = [];
+  }
+  
+  try {
+    featuredBundles = getFeaturedBundles();
+  } catch (error) {
+    console.error('Error loading featured bundles:', error);
+    featuredBundles = [];
+  }
 
   return (
     <>
@@ -119,7 +161,7 @@ export default function Home() {
       <section className="bg-black py-16">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-6">
-            {books.map((book) => (
+            {books && books.length > 0 ? books.map((book) => (
               <Link key={book.id} href={`/books/${book.slug}`}>
                 <div className="group bg-gray-900 rounded-lg overflow-hidden shadow-lg hover:shadow-xl transition-all duration-300 hover:-translate-y-1 cursor-pointer">
                   <div className="relative h-64 bg-gray-800">
@@ -139,7 +181,11 @@ export default function Home() {
                   </div>
                 </div>
               </Link>
-            ))}
+            )) : (
+              <div className="col-span-full text-center text-gray-400 py-8">
+                Books loading...
+              </div>
+            )}
           </div>
           <div className="text-center mt-12">
             <Link
@@ -151,6 +197,17 @@ export default function Home() {
           </div>
         </div>
       </section>
+
+      {/* Bundles Section - Temporarily disabled for debugging */}
+      {/* {featuredBundles.length > 0 && (
+        <BundlesSection
+          bundles={featuredBundles}
+          title="Bundles"
+          subtitle="Save time by starting with a curated collection designed for your journey"
+          showViewAll={true}
+          viewAllHref="/bundles"
+        />
+      )} */}
 
       {/* Other Series Section */}
       {otherSeries.length > 0 && (
