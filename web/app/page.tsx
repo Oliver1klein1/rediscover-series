@@ -84,24 +84,8 @@ export default function Home() {
           {/* Boxed Set Image Container - Used for alignment */}
           <div className="flex justify-center mb-12">
             <div className="relative w-full max-w-4xl">
-              {/* Logo and Title Section - Aligned with image width */}
+              {/* Title Section */}
               <div className="flex flex-col items-center gap-6 mb-12">
-                <div className="flex-shrink-0 flex items-center gap-4">
-                  <Image
-                    src="/assets/ansilo-boff-avatar-v2.jpg"
-                    alt="Ansilo Boff"
-                    width={100}
-                    height={100}
-                    className="rounded-full opacity-90 hover:opacity-100 transition-opacity duration-300"
-                  />
-                  <Image
-                    src="/assets/ansilo_boff_logo.jpg?v=3"
-                    alt="Ansilo Boff Logo"
-                    width={200}
-                    height={100}
-                    className="rounded-lg opacity-90 hover:opacity-100 transition-opacity duration-300"
-                  />
-                </div>
                 <div className="text-center">
                   <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold mb-6 leading-normal tracking-tight">
                     <span className="block text-yellow-400">Rediscovering Jesus'</span>
@@ -117,16 +101,30 @@ export default function Home() {
                 </div>
               </div>
 
-              {/* Boxed Set Image */}
-              <div className="relative w-full h-auto">
-                <Image
-                  src="/assets/covers/rediscover_boxed_set_final2.jpg"
-                  alt="Rediscover Series Boxed Set"
-                  width={1200}
-                  height={900}
-                  className="rounded-lg shadow-2xl"
-                  priority
-                />
+              {/* Video and Boxed Set Image */}
+              <div className="flex justify-center items-stretch gap-4 flex-wrap md:flex-nowrap">
+                <div className="flex-shrink-0 w-[200px] md:w-[245px] flex items-center">
+                  <video
+                    src="/assets/ansilo-boff-cyber-card.mp4"
+                    autoPlay
+                    loop
+                    muted
+                    playsInline
+                    className="rounded-lg shadow-2xl w-full h-auto max-h-full object-contain"
+                  />
+                </div>
+                <div className="relative flex-shrink-0 w-full md:w-[480px] max-w-full">
+                  <div className="relative w-full" style={{ aspectRatio: '4/3' }}>
+                    <Image
+                      src="/assets/covers/rediscover_boxed_set_final2.jpg"
+                      alt="Rediscover Series Boxed Set"
+                      fill
+                      className="rounded-lg shadow-2xl object-contain"
+                      priority
+                      sizes="(max-width: 768px) 100vw, 480px"
+                    />
+                  </div>
+                </div>
               </div>
             </div>
           </div>
@@ -194,6 +192,27 @@ export default function Home() {
             >
               View All Books
             </Link>
+          </div>
+
+          {/* Video Interview Card */}
+          <div className="mt-16 max-w-4xl mx-auto">
+            <div className="bg-gradient-to-br from-gray-900 to-black rounded-xl overflow-hidden shadow-2xl border border-gray-800">
+              <div className="p-6 md:p-8">
+                <h3 className="text-2xl md:text-3xl font-bold text-yellow-400 mb-4 text-center">
+                  From the TBT 'Lightbulb Moment' interviews
+                </h3>
+                <div className="relative w-full rounded-lg overflow-hidden bg-black" style={{ aspectRatio: '16/9' }}>
+                  <video
+                    src="/assets/tbt-interviews-01-dhanes3.mp4"
+                    controls
+                    className="w-full h-full object-contain"
+                    preload="metadata"
+                  >
+                    Your browser does not support the video tag.
+                  </video>
+                </div>
+              </div>
+            </div>
           </div>
         </div>
       </section>
@@ -268,6 +287,28 @@ export default function Home() {
           </div>
         </section>
       )}
+
+      {/* Author Images Section - Moved to Bottom */}
+      <section className="bg-black py-16">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="flex justify-center items-center gap-4">
+            <Image
+              src="/assets/ansilo-boff-avatar-v2.jpg"
+              alt="Ansilo Boff"
+              width={100}
+              height={100}
+              className="rounded-full opacity-90 hover:opacity-100 transition-opacity duration-300"
+            />
+            <Image
+              src="/assets/ansilo_boff_logo.jpg?v=3"
+              alt="Ansilo Boff Logo"
+              width={200}
+              height={100}
+              className="rounded-lg opacity-90 hover:opacity-100 transition-opacity duration-300"
+            />
+          </div>
+        </div>
+      </section>
     </div>
     </>
   );
