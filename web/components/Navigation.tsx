@@ -7,7 +7,7 @@ export default function Navigation() {
   const pathname = usePathname();
   
   // Determine which series title to show based on the current path
-  let seriesTitle = 'Rediscover Series';
+  let seriesTitle = 'The Rediscover Series';
   let seriesLink = '/';
   
   if (pathname?.startsWith('/other-books/fathers-heart')) {
@@ -20,7 +20,7 @@ export default function Navigation() {
     seriesTitle = 'Other Books';
     seriesLink = '/other-books';
   } else if (pathname?.startsWith('/books') || pathname === '/') {
-    seriesTitle = 'Rediscover Series';
+    seriesTitle = 'The Rediscover Series';
     seriesLink = '/';
   }
   
@@ -28,10 +28,21 @@ export default function Navigation() {
     <nav className="border-b border-gray-800 bg-black/50 backdrop-blur-sm sticky top-0 z-50">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex justify-between items-center h-20">
-          <Link href={seriesLink} className="text-2xl font-bold text-white hover:text-yellow-400 transition-all duration-300 flex items-center gap-2">
-            <span className="bg-gradient-to-r from-yellow-400 to-yellow-600 bg-clip-text text-transparent">
-              {seriesTitle}
-            </span>
+          <Link href={seriesLink} className="relative inline-block">
+            <div className="relative px-6 py-3 rounded-full bg-black border-2 border-yellow-500/80 shadow-[0_0_20px_rgba(251,191,36,0.6),0_0_40px_rgba(251,191,36,0.4),0_0_60px_rgba(251,191,36,0.2)] hover:shadow-[0_0_25px_rgba(251,191,36,0.8),0_0_50px_rgba(251,191,36,0.6),0_0_75px_rgba(251,191,36,0.4)] transition-all duration-300">
+              <span className="text-xl font-bold relative z-10">
+                {seriesTitle === 'The Rediscover Series' ? (
+                  <>
+                    <span className="text-yellow-400">The</span>{' '}
+                    <span className="text-white">Rediscover</span>{' '}
+                    <span className="text-yellow-400">Series</span>
+                  </>
+                ) : (
+                  <span className="text-white">{seriesTitle}</span>
+                )}
+              </span>
+              <div className="absolute inset-0 rounded-full bg-gradient-to-b from-yellow-400/10 to-orange-500/10 opacity-0 hover:opacity-100 transition-opacity duration-300"></div>
+            </div>
           </Link>
           <div className="flex items-center space-x-2">
             <Link 

@@ -142,7 +142,7 @@ export default function Home() {
             </p>
             <div className="text-center py-6">
               <p className="text-2xl font-bold text-yellow-400 mb-2">
-                From fear to freedom. From illusion to truth.
+                From fear to <span className="text-white">freedom</span>. From illusion to <span className="text-white">truth</span>.
               </p>
               <p className="text-xl italic text-gray-400">
                 Raw. Daring. Restorative.
@@ -199,7 +199,7 @@ export default function Home() {
             <div className="bg-gradient-to-br from-gray-900 to-black rounded-xl overflow-hidden shadow-2xl border border-gray-800">
               <div className="p-6 md:p-8">
                 <h3 className="text-2xl md:text-3xl font-bold text-yellow-400 mb-4 text-center">
-                  From the TBT 'Lightbulb Moment' interviews
+                  From the <span className="text-white">TBT 'Lightbulb Moment'</span> interviews
                 </h3>
                 <div className="relative w-full rounded-lg overflow-hidden bg-black" style={{ aspectRatio: '16/9' }}>
                   <video
@@ -234,7 +234,7 @@ export default function Home() {
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div className="text-center mb-12">
               <h2 className="text-4xl md:text-5xl font-bold text-white mb-4">
-                Other Books by Ansilo Boff
+                <span className="text-yellow-400">Other Books by </span>Ansilo Boff
               </h2>
               <p className="text-xl text-gray-400">
                 Discover more inspiring series from the same author
