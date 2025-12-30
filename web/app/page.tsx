@@ -6,7 +6,6 @@ import { getFeaturedBundles } from '@/lib/bundles';
 import { getSeriesSEO } from '@/src/data/seo';
 import JsonLd from '@/components/JsonLd';
 import BundlesSection from '@/components/BundlesSection';
-import VideoPlayer from '@/components/VideoPlayer';
 import type { Metadata } from 'next';
 
 let seoData: ReturnType<typeof getSeriesSEO>;
@@ -208,13 +207,23 @@ export default function Home() {
           <div className="mt-16 max-w-4xl mx-auto">
             <div className="bg-gradient-to-br from-gray-900 to-black rounded-xl overflow-hidden shadow-2xl border border-gray-800">
               <div className="p-6 md:p-8">
-                <h3 className="text-2xl md:text-3xl font-bold text-yellow-400 mb-4 text-center">
+                <h3 className="text-2xl md:text-3xl font-bold text-yellow-400 mb-2 text-center">
                   From the <span className="text-white">TBT 'Lightbulb Moment'</span> interviews
                 </h3>
+                <p className="text-sm text-white text-center mb-4">
+                  (from www.truthbeyondtradition.com)
+                </p>
                 <div className="relative w-full rounded-lg overflow-hidden bg-black" style={{ aspectRatio: '16/9' }}>
-                  <VideoPlayer
-                    src="/assets/tbt-interviews-01-dhanes3.mp4"
-                    className="w-full h-full object-contain"
+                  <iframe
+                    width="560"
+                    height="315"
+                    src="https://www.youtube.com/embed/wDsHqnWvbgs?si=r2I8RalVO5GQYmvq"
+                    title="YouTube video player"
+                    frameBorder="0"
+                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                    referrerPolicy="strict-origin-when-cross-origin"
+                    allowFullScreen
+                    className="w-full h-full"
                   />
                 </div>
               </div>
