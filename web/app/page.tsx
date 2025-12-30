@@ -6,6 +6,7 @@ import { getFeaturedBundles } from '@/lib/bundles';
 import { getSeriesSEO } from '@/src/data/seo';
 import JsonLd from '@/components/JsonLd';
 import BundlesSection from '@/components/BundlesSection';
+import VideoPlayer from '@/components/VideoPlayer';
 import type { Metadata } from 'next';
 
 let seoData: ReturnType<typeof getSeriesSEO>;
@@ -211,22 +212,10 @@ export default function Home() {
                   From the <span className="text-white">TBT 'Lightbulb Moment'</span> interviews
                 </h3>
                 <div className="relative w-full rounded-lg overflow-hidden bg-black" style={{ aspectRatio: '16/9' }}>
-                  <video
+                  <VideoPlayer
                     src="/assets/tbt-interviews-01-dhanes3.mp4"
-                    controls
                     className="w-full h-full object-contain"
-                    preload="metadata"
-                    onError={(e) => {
-                      const video = e.target as HTMLVideoElement;
-                      video.style.display = 'none';
-                      const errorDiv = document.createElement('div');
-                      errorDiv.className = 'flex items-center justify-center h-full text-gray-400';
-                      errorDiv.innerHTML = '<p>Video will be available soon. Please check back later.</p>';
-                      video.parentElement?.appendChild(errorDiv);
-                    }}
-                  >
-                    Your browser does not support the video tag.
-                  </video>
+                  />
                 </div>
               </div>
             </div>
