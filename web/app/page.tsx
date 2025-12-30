@@ -86,7 +86,7 @@ export default function Home() {
             <div className="relative w-full max-w-4xl">
               {/* Title Section */}
               <div className="flex flex-col items-center gap-6 mb-12">
-                <div className="text-center">
+                <div className="text-center flex items-center justify-center gap-4 flex-wrap">
                   <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold mb-6 leading-normal tracking-tight">
                     <span className="block text-yellow-400">Rediscovering Jesus'</span>
                     <span className="block mt-2">
@@ -94,6 +94,15 @@ export default function Home() {
                       <span className="text-yellow-400">Teachings</span>
                     </span>
                   </h1>
+                  <Image
+                    src="/assets/ansilo-boff-avatar-v2.jpg"
+                    alt="Ansilo Boff"
+                    width={80}
+                    height={80}
+                    className="rounded-full opacity-90 hover:opacity-100 transition-opacity duration-300 flex-shrink-0"
+                  />
+                </div>
+                <div className="text-center">
                   <p className="text-xl md:text-2xl lg:text-3xl text-gray-300 mb-2 font-medium italic mt-6">
                     and the Father's Love
                   </p>
