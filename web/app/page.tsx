@@ -216,6 +216,14 @@ export default function Home() {
                     controls
                     className="w-full h-full object-contain"
                     preload="metadata"
+                    onError={(e) => {
+                      const video = e.target as HTMLVideoElement;
+                      video.style.display = 'none';
+                      const errorDiv = document.createElement('div');
+                      errorDiv.className = 'flex items-center justify-center h-full text-gray-400';
+                      errorDiv.innerHTML = '<p>Video will be available soon. Please check back later.</p>';
+                      video.parentElement?.appendChild(errorDiv);
+                    }}
                   >
                     Your browser does not support the video tag.
                   </video>
